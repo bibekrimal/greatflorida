@@ -1,0 +1,24 @@
+@use '../node_modules/sass-rem' as rem;
+
+@import '../node_modules/bootstrap/scss/functions';
+
+@import 'bootstrap-custom';
+
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/variables-dark';
+
+@import '../node_modules/bootstrap/scss/maps';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/root';
+
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/other-mixins';
+@import 'base/helpers';
+@import 'base/utilities';
+
+@import 'layout/common';
+
+@import 'components/information-tree';
+@import 'components/factors';
+@import 'components/faq';

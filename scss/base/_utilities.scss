@@ -1,0 +1,44 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .font#{$infix}-large {
+      font-size: rem.convert(20px) !important;
+    }
+    .font#{$infix}-small {
+      font-size: 0.9375rem !important;
+    }
+
+    .rounded#{$infix}-0 {
+      border-radius: 0 !important;
+    }
+    .rounded#{$infix}-xs {
+      border-radius: 0.125rem !important;
+    }
+    .rounded#{$infix}-sm {
+      border-radius: 0.3125rem !important;
+    }
+    .rounded#{$infix}-md {
+      border-radius: 0.5rem !important;
+    }
+    .rounded#{$infix}-20 {
+      border-radius: 1.25rem !important;
+    }
+    .rounded#{$infix}-lg {
+      border-radius: 0.625rem !important;
+    }
+    .rounded#{$infix}-pill {
+      border-radius: 50rem !important;
+    }
+
+    .font-weight#{$infix}-normal {
+      font-weight: normal !important;
+    }
+    .font-weight#{$infix}-bold {
+      font-weight: bold !important;
+    }
+    .font-weight#{$infix}-bolder {
+      font-weight: 900 !important;
+    }
+  }
+}

@@ -37,7 +37,7 @@
     z-index: -1;
 
     @include media-breakpoint-down(md) {
-      top: 43px;
+      top: 32px;
       width: 70%;
       right: auto;
       bottom: auto;
@@ -54,6 +54,12 @@
     //   margin-right: 18px;
     //   margin-left: 15px;
     // }
+  }
+
+  .icon__with__circle {
+    @include media-breakpoint-down(md) {
+      --icon-with-circle-size: 4.25rem; // 68px
+    }
   }
 }
 
@@ -123,6 +129,9 @@
   @include media-breakpoint-down(md) {
     text-align: right;
     align-items: flex-end;
+    min-height: 68px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 

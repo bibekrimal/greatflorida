@@ -40,5 +40,12 @@
     .font-weight#{$infix}-bolder {
       font-weight: 900 !important;
     }
+
+    .position#{$infix}-relative {
+      position: relative !important;
+    }
+    .position#{$infix}-static {
+      position: static !important;
+    }
   }
 }

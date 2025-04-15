@@ -84,6 +84,19 @@ h5,
     z-index: 1;
   }
 
+  &.image-bleed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50vw;
+
+    @include media-breakpoint-down(md) {
+      position: relative;
+      width: 100%;
+    }
+  }
+
   &.overlay--blue {
     &:after {
       background-color: rgba($info, 0.54);
@@ -96,6 +109,10 @@ h5,
       background-color: rgba($primary, 0.55);
       mix-blend-mode: screen;
     }
+  }
+
+  &--small {
+    height: rem.convert(140px);
   }
 }
 
@@ -372,6 +389,10 @@ h5,
 }
 
 .contact__section {
+  // background: url(assets/images/bg-cloud.svg) no-repeat;
+  background: url(/assets/images/bg-cloud.jpg) no-repeat 0 100%;
+  // background-size: 100% auto;
+  background-size: cover;
   .image-holder {
     @include media-breakpoint-down(lg) {
     }

@@ -803,8 +803,9 @@
 }
 
 .icon__with__circle {
-  width: 5.375rem;
-  height: 5.375rem;
+  --icon-with-circle-size: 5.375rem;
+  width: var(--icon-with-circle-size);
+  height: var(--icon-with-circle-size);
   background: #fff;
   border: 0.1875rem solid #f36522;
   border-radius: 100%;
@@ -1394,7 +1395,7 @@
 }
 @media (max-width: 767.98px) {
   .graphic__list__item:before {
-    top: 43px;
+    top: 32px;
     width: 70%;
     right: auto;
     bottom: auto;
@@ -1403,6 +1404,11 @@
 .graphic__list__item .pill__heading {
   padding-top: 0;
   padding-bottom: 0;
+}
+@media (max-width: 767.98px) {
+  .graphic__list__item .icon__with__circle {
+    --icon-with-circle-size: 4.25rem;
+  }
 }
 
 .graphic__list__heading__counter {
@@ -1467,6 +1473,9 @@
   .graphic__list__title {
     text-align: right;
     align-items: flex-end;
+    min-height: 68px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 

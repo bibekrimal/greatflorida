@@ -1,6 +1,7 @@
 .icon__with__circle {
-  width: rem.convert(86px);
-  height: rem.convert(86px);
+  --icon-with-circle-size: 5.375rem; // 86px
+  width: var(--icon-with-circle-size);
+  height: var(--icon-with-circle-size);
   background: $white;
   border: 0.1875rem solid $primary; // 3px
   border-radius: 100%;
@@ -10,6 +11,10 @@
   padding: rem.convert(2px);
   overflow: hidden;
   flex-shrink: 0;
+
+  // @include media-breakpoint-down(md) {
+  //   --icon-with-circle-size: 4.25rem; // 68px
+  // }
 
   img {
     width: 100%;

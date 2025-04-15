@@ -1,0 +1,19 @@
+.icon__with__circle {
+  width: rem.convert(86px);
+  height: rem.convert(86px);
+  background: $white;
+  border: 0.1875rem solid $primary; // 3px
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem.convert(2px);
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}

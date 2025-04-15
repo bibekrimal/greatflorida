@@ -105,3 +105,121 @@
     background: $info;
   }
 }
+
+.auto-factors {
+  &__item {
+    // display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .pill__heading {
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+
+    // .image-with-overlay {
+    //   @include media-breakpoint-down(lg) {
+    //     height: 250px;
+    //   }
+    // }
+  }
+
+  &__col {
+    // flex: 1 0 0%;
+    &--middle {
+      position: relative;
+
+      @include media-breakpoint-down(md) {
+        // margin-bottom: 10px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -50%;
+        right: -50%;
+        // width: 100%;
+        height: 4px;
+        background: $info;
+        margin: auto;
+        z-index: -1;
+
+        @include media-breakpoint-down(lg) {
+          left: 0;
+        }
+
+        @include media-breakpoint-down(md) {
+          width: 4px;
+          height: auto;
+          left: 41px;
+          right: auto;
+        }
+      }
+    }
+  }
+
+  &__description {
+    --auto-factors-row-space: 44px;
+    background: $white;
+    padding: 12px;
+    min-height: 192px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include media-breakpoint-down(lg) {
+      --auto-factors-row-space: 56px;
+    }
+
+    @include media-breakpoint-down(md) {
+      min-height: rem.convert(100px);
+    }
+
+    &:before {
+      --auto-factors-icon-size: 28px;
+      --auto-factors-icon-border: 4px;
+      content: '';
+      width: var(--auto-factors-icon-size);
+      height: var(--auto-factors-icon-size);
+      border: var(--auto-factors-icon-border) solid $info;
+      border-radius: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: calc(
+        (var(--auto-factors-row-space) / -2) -
+          (var(--auto-factors-icon-size) / 2) - var(--auto-factors-icon-border)
+      );
+      margin: auto;
+      background: #fff url('../images/icons/icon-dollar-blue.svg') no-repeat 50%
+        50%;
+      background-size: 13px 21px;
+
+      @include media-breakpoint-down(md) {
+        // left: 24px;
+        // bottom: auto;
+        // top: -36px;
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

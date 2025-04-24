@@ -1,0 +1,31 @@
+mixin cardWithImage(image, icon, title, variant='blue', description=null)
+  -
+    // Default Classes
+    let previewClass = 'preview image-with-overlay border border-2 rounded'
+    let contentClass = 'content-with-icon text-white rounded-sm h-100'
+    let iconClass = 'icon border border-2'
+
+    // Variant Classes
+    if (variant === 'blue') {
+      previewClass += ' overlay--blue border-info'
+      contentClass += ' bg-info'
+      iconClass += ' border-primary'
+    } else if (variant === 'orange') {
+      previewClass += ' overlay--orange border-primary'
+      contentClass += ' bg-primary'
+      iconClass += ' border-info'
+    }
+
+    // Case without description and default variant
+    if (typeof description === 'undefined') description = null
+    if (typeof variant === 'undefined') variant = 'blue'
+
+  article.card-type-content
+    div(class=previewClass)
+      img(src=image, alt="image description", width="254", height="340")
+    .px-2_5.flex-grow-1
+      div(class=contentClass)
+        div(class=iconClass)
+          img(src=icon, alt="image description", width="70", height="70")
+        h3.h5.text-uppercase= title
+        p= description

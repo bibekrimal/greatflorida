@@ -95,6 +95,11 @@ h5,
       position: relative;
       width: 100%;
     }
+
+    &.image-bleed--left {
+      left: auto;
+      right: 0;
+    }
   }
 
   &.overlay--blue {
@@ -124,7 +129,8 @@ h5,
   z-index: 1;
   .preview {
     height: 340px;
-    margin-bottom: rem.convert(-126px);
+    // margin-bottom: rem.convert(-126px);
+    margin-bottom: rem.convert(-90px);
     z-index: -1;
 
     @include media-breakpoint-down(md) {
@@ -150,9 +156,10 @@ h5,
     }
 
     .icon {
-      width: 70px;
-      height: 70px;
+      width: 83px;
+      height: 83px;
       background: $white;
+      box-shadow: 0 0 0 3px $white;
       border-radius: 100%;
       position: absolute;
       top: rem.convert(-41px);

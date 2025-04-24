@@ -44,6 +44,12 @@
     }
   }
 
+  &.graphic__list__item--blue {
+    &:before {
+      background: $primary;
+    }
+  }
+
   .pill__heading {
     padding-top: 0;
     padding-bottom: 0;
@@ -105,6 +111,11 @@
     background: #fff url('../images/icons/icon-dollar-blue.svg') no-repeat 50%
       50%;
     background-size: 13px 21px;
+
+    .graphic__list__item--blue & {
+      background-image: url('../images/icons/icon-dollar.svg');
+      border-color: $primary;
+    }
   }
 
   &:after {

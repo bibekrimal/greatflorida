@@ -3,7 +3,7 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     .font#{$infix}-large {
-      font-size: rem.convert(20px) !important;
+      font-size: $font-size-lg !important;
     }
     .font#{$infix}-small {
       font-size: 0.9375rem !important;

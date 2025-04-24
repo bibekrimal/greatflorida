@@ -82,7 +82,22 @@ $danger: $red;
 $light: $gray-100;
 $dark: $blue-dark;
 $white: $white;
+$gray: $gray;
 
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  // "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "white":      $white,
+  "gray":       $gray
+);
+// scss-docs-end theme-colors-map
 
 // Options
 //

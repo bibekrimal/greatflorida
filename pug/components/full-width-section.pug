@@ -1,4 +1,4 @@
-mixin fullWidthSection(image, title, variant='bg-info text-white', imageAlignment=null, description=null)
+mixin fullWidthSection(image, title, variant='bg-info text-white', imageAlignment='default', description=null)
   -
     // Base Classes
     // additional classes can be passed in as the last argument
@@ -12,7 +12,7 @@ mixin fullWidthSection(image, title, variant='bg-info text-white', imageAlignmen
       rowClass += ' flex-row-reverse'
       imageClass += ' image-bleed--left'
       contentClass += ' text-md-end'
-    } else {
+    } else if (imageAlignment === 'rightAligned') {
       contentClass += ' text-md-start'
     }
     

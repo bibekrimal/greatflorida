@@ -1,0 +1,70 @@
+extends includes/layout.pug
+include components/two-cols-text-image.pug
+include components/section-intro.pug
+include components/graphic-list.pug
+include components/full-width-section.pug
+block content
+  .intro.py-3.text-center.text-md-start
+    .container
+      +twoColTextImg(
+        "assets/images/img38.jpg",
+        "Condo Insurance",
+        "If your condo is damaged, or a visitor is injured inside, you could face steep repair estimates, legal bills, and medical costs. You are also liable for damage to other units caused by accidents or faults with your condo. With so much potential for problems, high-quality condo insurance is a must-have. Protect your investment and your financial future with a low-cost condo policy from GreatFlorida Insurance."
+      )
+  section.py-3
+    .container
+      +sectionIntro("What Does Condo Insurance in Florida Cover?")
+        p Condo coverage is what's known as a "walls in" policy. It covers the inside of your condo, but not the structure of the building. A robust condo policy is vital as you never know what can happen when you share a building with others.
+        p Some of the most common parts of a condo policy include:
+      .graphic__list
+        +graphicItem(
+          "assets/images/icons/icon57.svg",
+          "Interior Structure",
+          "Your flooring, walls, cabinets, and permanent fixtures are all covered from accidents and damage."
+        )
+        
+        +graphicItem(
+          "assets/images/icons/icon58.svg",
+          "Personal Property",
+          "Your belongings are worth more than you realize. And it can be very costly to replace them. Protect your furniture, appliances, clothing, and collections with a policy that covers your personal propety."
+        )
+        +graphicItem(
+          "assets/images/icons/icon59.svg",
+          "Liability",
+          "Condo owners often know their neighbors. If someone is injured in your condo, you are liable for potential medical bills and legal costs. Liability coverage protects you from these unexpected bills and legal battles. It also ensures your injured guests get the medical care they need."
+        )
+        +graphicItem(
+          "assets/images/icons/icon60.svg",
+          "Loss of Use",
+          "If your condo is damaged, you may need to move out while repair are completed. An unexpected move can be expensive and traumatic for the whole family. Loss of use coverage offsets the cost of from living away from home during a claim when you can't live in your condo."
+        )
+        +graphicItem(
+          "assets/images/icons/icon61.svg",
+          "Loss Assessment",
+          "A valuable add-on for condo owners who share spaces, gardens, and elevators with others. Loss assessment protects against claims on shared property, covering you against unexpected expenses."
+        )
+        +graphicItem(
+          "assets/images/icons/icon62.svg",
+          "Water Damage",
+          "Failed plumbing and burst pipes are a common cause of disaster in older condo buildings. Water damage coverage helps you pay for the massive unexpected costs from water damage. Flood insurance is treated differently in Florida. Due to hurricane risks and heavy rainfall, condos are placed into flood zones according to risk.  Ask your GreatFlorida agent about flood insurance requirements and federally backed policies to protect your Florida condo from flood waters."
+        )
+        +graphicItem(
+          "assets/images/icons/icon63.svg",
+          "Hurricane & Windstorm",
+          "The most feared season among Florida residents. Hurricane season spans half the year. Hurricane and windstorm coverage gives you peace of mind when summer rolls around."
+        )
+  +fullWidthSection(
+    "assets/images/img39.jpg",
+    "Is Hurricane Damage Covered by Condo Insurance?",
+    "bg-info text-white mb-5",
+    "leftAligned",
+    "Damage to the exterior of your building during a hurricane should be covered by the condo association's policy. Hurricane related damage is often included in condo insurance policies, but talk to your agent to make sure you know what is covered."
+  )
+  +fullWidthSection(
+    "assets/images/img40.jpg",
+    "How Does a Deductible Work?",
+    "bg-primary text-white"
+  )
+    p A deductible is the amount of money you agree to pay toward your loss or repairs before your insurance kicks in. The greater the amount of your deductible, the lower your premiums will be. Talk to a GreatFlorida agent about finding the right balance between low-cost premiums and your ability to pay a high deductible.
+    p For some condo owners, a high deductible is not the best step as they won't be able to afford it in the event of a claim.
+  

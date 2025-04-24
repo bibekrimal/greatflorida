@@ -1,0 +1,22 @@
+mixin graphicItem(icon, title, description, variant="default")
+  -
+    // Default Classes
+    let borderColor = 'border-primary'
+    let bgColor = 'bg-primary'
+    let itemClass = 'graphic__list__item'
+
+    // Variant Classes
+    if (variant === 'variant-blue') {
+      borderColor = 'border-info'
+      bgColor = 'bg-info'
+      itemClass = 'graphic__list__item graphic__list__item--blue'
+    }
+    
+  div(class=itemClass)
+    span(class=`icon__with__circle ${borderColor}`)
+      img(src=icon, width="87", alt="image description")
+    .graphic__list__title-holder
+      div(class=`graphic__list__title text-white rounded-sm ${bgColor}`)
+        h3.h5.text-uppercase.mb-0= title
+    div(class=`graphic__list__content border border-3 border-md-4 rounded-sm font-md-large ${borderColor}`)
+      p= description

@@ -1,0 +1,30 @@
+mixin fullWidthSection(image, title, variant='bg-info text-white', imageAlignment=null, description=null)
+  -
+    // Base Classes
+    // additional classes can be passed in as the last argument
+    // variant is used to set the background color and text color (use bootstrap classes)
+    let baseSectionClass = 'overflow-hidden pt-3 pt-md-0'
+    let rowClass = 'row justify-content-between'
+    let imageClass = 'image-with-overlay image-bleed mb-3 mb-md-0'
+    let contentClass = "col-md-6 text-center font-lg-large py-3 py-md-5"
+
+    if (imageAlignment === 'leftAligned') {
+      rowClass += ' flex-row-reverse'
+      imageClass += ' image-bleed--left'
+      contentClass += ' text-md-end'
+    } else {
+      contentClass += ' text-md-start'
+    }
+    
+  article(class=`${baseSectionClass} ${variant}`)= text
+    .container
+      div(class=rowClass)
+        .col-md-5.order-md-1.d-flex.justify-content-center.justify-content-md-end.position-relative
+          div(class=imageClass)
+            img(src=image width="435" height="223" alt="image description")
+        div(class=contentClass)
+          h2= title
+          if description
+            p= description
+          else
+            block

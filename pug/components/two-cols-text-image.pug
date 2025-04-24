@@ -1,0 +1,19 @@
+mixin twoColTextImg(image, title, description, alignment='default')
+  -
+    // Default Classes
+    let imageColClass = 'col-md-6 order-md-1 d-flex justify-content-center justify-content-md-end'
+    let contentColClass = 'col-md-6 font-lg-large text-center text-md-start'
+
+    // Alignment Classes
+    if (alignment === 'rightAligned') {
+      imageColClass = 'col-md-6 d-flex justify-content-center justify-content-md-start'
+      contentColClass = 'col-md-6 font-lg-large text-md-end'
+    }
+
+  .row.align-items-start.py-3.py-md-5
+    div(class=imageColClass)
+      .image-with-overlay.mb-3.mb-md-0
+        img(src=image width="435" height="223" alt="image description")
+    div(class=contentColClass)
+      h2.text-info= title
+      p= description

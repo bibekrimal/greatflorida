@@ -1,0 +1,11 @@
+mixin factorsArticle(title, description, icon, image=null)
+  article.factors__article.text-center.mb-3
+    if image
+      .factors__image.image-with-overlay.border.border-4.border-primary.rounded-sm
+        img.img-fluid(src=image, alt="image description", width="206", height="141")
+    .factors__content
+      .factors__icon
+        img(src=icon, alt="image description", width="87")
+      h3.h5.factors__heading.bg-info.text-white.rounded-pill.text-uppercase= title
+      .px-lg-3
+        p= description

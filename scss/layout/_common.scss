@@ -344,7 +344,7 @@ h5,
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: rem(2);
+    padding: rem.convert(2px);
     position: absolute;
     top: 0;
     left: rem.convert(-27px);

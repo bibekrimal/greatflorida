@@ -2,7 +2,11 @@ extends includes/layout.pug
 include components/two-cols-text-image.pug
 include components/section-intro.pug
 include components/graphic-list.pug
+include components/factors-article.pug
 include components/full-width-section.pug
+block vars
+  - var currentPage = "condo"
+
 block content
   .intro.py-3.text-center.text-md-start
     .container
@@ -68,4 +72,64 @@ block content
   )
     p A deductible is the amount of money you agree to pay toward your loss or repairs before your insurance kicks in. The greater the amount of your deductible, the lower your premiums will be. Talk to a GreatFlorida agent about finding the right balance between low-cost premiums and your ability to pay a high deductible.
     p For some condo owners, a high deductible is not the best step as they won't be able to afford it in the event of a claim.
-  
+  section.py-4
+    .container
+      +sectionIntro(
+        "What Affects Condo Insurance Premiums?",
+        "Insurance rates are affected by a number of things, including:",
+        "text-primary"
+      )
+      .factors__section.factors__article--with-image
+        .row.gx-md-10.gx-lg-17_5
+          .col-sm-4.position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Age of the building",
+              "An older building is a potential hotspot for problems with plumbing and electrical issues.",
+              "assets/images/icons/icon64.svg",
+              "assets/images/img41.jpg"
+            )
+          .col-sm-4.position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Location",
+              "If your area has a high crime rate or suffers from natural disaster damage regularly, your premiums will be affected.",
+              "assets/images/icons/icon65.svg",
+              "assets/images/img42.jpg"
+            )
+          .col-sm-4.position-relative
+            +factorsArticle(
+              "Personal circumstances",
+              "Your age, gender, and marital status all affect your insurance rates. Female residents and older married couples enjoy lower premiums for condo insurance.",
+              "assets/images/icons/icon66.svg",
+              "assets/images/img43.jpg"
+            )
+        .row.gx-md-10.gx-lg-17_5
+          .col-sm-4.position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Claims history",
+              "If you haven't made a claim before, you will benefit from better insurance rates.",
+              "assets/images/icons/icon67.svg",
+              "assets/images/img44.jpg"
+            )
+          .col-sm-4.position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Your chosen deductible",
+              "The higher your chosen deductible, the lower your premiums will be. It is vital to find a balance between deductible and premium affordability.",
+              "assets/images/icons/icon68.svg",
+              "assets/images/img45.jpg"
+            )
+          .col-sm-4.position-relative
+            +factorsArticle(
+              "Credit score",
+              "Your credit history affects your insurance rates. Owners with higher credit scores enjoy lower insurance costs. While you can't do anything about your age or marital status immediately, you can always take steps to improve your credit score.",
+              "assets/images/icons/icon69.svg",
+              "assets/images/img46.jpg"
+            )
+            

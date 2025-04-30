@@ -1,0 +1,18 @@
+nav.navbar.navbar-expand-lg.bg-gray.fixed-top.position-fixed
+  .container
+    a.navbar-brand(href="#")
+      img.img-fluid(src="assets/images/logo.png", alt="GreatFlorida", width="50")
+    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarNav
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(class=(currentPage === 'auto' ? 'active' : ''), href="index.html", aria-current="page") Auto
+        li.nav-item
+          a.nav-link(class=(currentPage === 'homeowners' ? 'active' : ''), href="homeowners.html") Homeowners
+        li.nav-item
+          a.nav-link(class=(currentPage === 'renters' ? 'active' : ''), href="renters.html") Renters
+        li.nav-item
+          a.nav-link(class=(currentPage === 'condo' ? 'active' : ''), href="condo.html") Condo
+        li.nav-item
+          a.nav-link(class=(currentPage === 'flood' ? 'active' : ''), href="flood.html") Flood

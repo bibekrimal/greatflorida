@@ -2,7 +2,10 @@ doctype html
 html(lang="en")
   include head.pug
   body
-    #wrapper
+    block vars
+    //TODO: remove class from #wrapper
+    #wrapper.pt-6
+      include nav.pug
 
       block content
       

@@ -51,8 +51,8 @@
       top: 0;
       bottom: 0;
       left: 100%;
-      height: 3px;
-      width: 100px;
+      height: rem.convert(3px);
+      width: rem.convert(100px);
       margin: auto;
       background: $primary;
     }
@@ -75,7 +75,7 @@
 }
 
 .factors__article {
-  padding-bottom: 25px;
+  padding-bottom: rem.convert(25px);
 
   @include media-breakpoint-down(md) {
     padding-bottom: 0;
@@ -85,7 +85,7 @@
 .factors__image {
   width: var(--factors-image-width);
   height: var(--factors-image-height);
-  margin: 0 auto -15px;
+  margin: rem.convert(0 auto -15px);
 }
 
 .factors__content {
@@ -103,10 +103,10 @@
   right: 0;
   margin: auto;
   // margin-bottom: rem.convert(25px);
-  border: 4px solid $info;
+  border: rem.convert(4px solid $info);
   border-radius: 100%;
-  width: 89px;
-  height: 89px;
+  width: rem.convert(89px);
+  height: rem.convert(89px);
   background: $white;
   display: flex;
   align-items: center;
@@ -131,8 +131,8 @@
     bottom: 100%;
     left: 0;
     right: 0;
-    width: 4px;
-    height: 25px;
+    width: rem.convert(4px);
+    height: rem.convert(25px);
     margin: auto;
     background: $info;
   }
@@ -143,12 +143,12 @@
     // display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: rem.convert(30px);
 
     .pill__heading {
       @include media-breakpoint-down(md) {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: rem.convert(15px);
       }
     }
 
@@ -176,7 +176,7 @@
         left: -50%;
         right: -50%;
         // width: 100%;
-        height: 4px;
+        height: rem.convert(4px);
         background: $info;
         margin: auto;
         z-index: -1;
@@ -186,9 +186,9 @@
         }
 
         @include media-breakpoint-down(md) {
-          width: 4px;
+          width: rem.convert(4px);
           height: auto;
-          left: 41px;
+          left: rem.convert(41px);
           right: auto;
         }
       }
@@ -196,10 +196,10 @@
   }
 
   &__description {
-    --auto-factors-row-space: 44px;
+    --auto-factors-row-space: 2.75rem; // 44px
     background: $white;
-    padding: 12px;
-    min-height: 192px;
+    padding: rem.convert(12px);
+    min-height: rem.convert(192px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -215,8 +215,8 @@
     }
 
     &:before {
-      --auto-factors-icon-size: 28px;
-      --auto-factors-icon-border: 4px;
+      --auto-factors-icon-size: 1.75rem; // 28px
+      --auto-factors-icon-border: 0.25rem; // 4px
       content: '';
       width: var(--auto-factors-icon-size);
       height: var(--auto-factors-icon-size);
@@ -232,7 +232,7 @@
       margin: auto;
       background: #fff url('../images/icons/icon-dollar-blue.svg') no-repeat 50%
         50%;
-      background-size: 13px 21px;
+      background-size: rem.convert(13px 21px);
 
       @include media-breakpoint-down(md) {
         // left: 24px;

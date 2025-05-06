@@ -802,7 +802,7 @@
 }
 
 .contact__section {
-  background: url(/assets/images/bg-cloud.jpg) no-repeat 0 100%;
+  background: url(../images/bg-cloud.jpg) no-repeat 0 100%;
   background-size: cover;
 }
 .about-section {

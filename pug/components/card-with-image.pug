@@ -20,12 +20,12 @@ mixin cardWithImage(image, icon, title, variant='blue', description=null)
     if (typeof description === 'undefined') description = null
     if (typeof variant === 'undefined') variant = 'blue'
 
-  article.card-type-content
+  article.card-type-content.mb-3
     div(class=previewClass)
       img(src=image, alt="image description", width="254", height="340")
     .px-2_5.flex-grow-1
       div(class=contentClass)
         div(class=iconClass)
           img(src=icon, alt="image description", width="70", height="70")
-        h3.h5.text-uppercase= title
+        h3.h5= title
         p= description

@@ -1,3 +1,7 @@
+:root {
+  --bs-body-font-size: 1.125rem; // 18px
+}
+
 #wrapper {
   width: 100%;
   position: relative;
@@ -128,19 +132,19 @@ h5,
   flex-grow: 1;
   z-index: 1;
   .preview {
-    height: 340px;
+    height: rem.convert(340px);
     // margin-bottom: rem.convert(-126px);
     margin-bottom: rem.convert(-90px);
     z-index: -1;
 
     @include media-breakpoint-down(md) {
-      height: 300px;
+      height: rem.convert(300px);
     }
   }
 
   .content-with-icon {
     position: relative;
-    padding: rem.convert(37px 16px 16px);
+    padding: rem.convert(50px 16px 16px);
 
     &:after {
       content: '';
@@ -156,10 +160,10 @@ h5,
     }
 
     .icon {
-      width: 83px;
-      height: 83px;
+      width: rem.convert(83px);
+      height: rem.convert(83px);
       background: $white;
-      box-shadow: 0 0 0 3px $white;
+      box-shadow: rem.convert(0 0 0 3px $white);
       border-radius: 100%;
       position: absolute;
       top: rem.convert(-41px);
@@ -183,8 +187,8 @@ h5,
   margin: auto;
   // width: 184px;
   // height: 184px;
-  width: 210px;
-  height: 210px;
+  width: rem.convert(210px);
+  height: rem.convert(210px);
   background: $white;
   // border: 4px solid $white;
   // outline: 4px solid $red;
@@ -195,22 +199,22 @@ h5,
   z-index: 1;
 
   @include media-breakpoint-down(lg) {
-    width: 140px;
-    height: 140px;
+    width: rem.convert(140px);
+    height: rem.convert(140px);
   }
 
   @include media-breakpoint-down(md) {
-    width: 100px;
-    height: 100px;
-    padding: 20px;
+    width: rem.convert(100px);
+    height: rem.convert(100px);
+    padding: rem.convert(20px);
     top: auto;
-    bottom: -48px;
+    bottom: rem.convert(-48px);
   }
 
   @include media-breakpoint-down(sm) {
-    width: 80px;
-    height: 80px;
-    padding: 10px;
+    width: rem.convert(80px);
+    height: rem.convert(80px);
+    padding: rem.convert(10px);
   }
 
   img {
@@ -224,29 +228,29 @@ h5,
   &:before {
     content: '';
     position: absolute;
-    top: -13px;
-    left: -13px;
-    bottom: -13px;
-    right: -13px;
-    border: 4px solid $white;
+    top: rem.convert(-13px);
+    left: rem.convert(-13px);
+    bottom: rem.convert(-13px);
+    right: rem.convert(-13px);
+    border: rem.convert(4px solid $white);
     border-radius: 100%;
 
     @include media-breakpoint-down(md) {
-      top: -8px;
-      left: -8px;
-      bottom: -8px;
-      right: -8px;
+      top: rem.convert(-8px);
+      left: rem.convert(-8px);
+      bottom: rem.convert(-8px);
+      right: rem.convert(-8px);
     }
   }
 }
 
 .vs-block {
   position: relative;
-  padding: 43px 60px 20px 20px;
+  padding: rem.convert(43px 60px 20px 20px);
   height: 100%;
 
   @include media-breakpoint-down(lg) {
-    padding-right: 20px;
+    padding-right: rem.convert(20px);
   }
 
   @include media-breakpoint-down(md) {
@@ -254,11 +258,11 @@ h5,
   }
 
   &.vs-block--alt {
-    padding-left: 60px;
-    padding-right: 20px;
+    padding-left: rem.convert(60px);
+    padding-right: rem.convert(20px);
 
     @include media-breakpoint-down(lg) {
-      padding-left: 20px;
+      padding-left: rem.convert(20px);
     }
 
     @include media-breakpoint-down(md) {
@@ -268,7 +272,7 @@ h5,
 
     .vs-block__title {
       background: $info;
-      border-radius: 0 50px 50px 0;
+      border-radius: rem.convert(0 50px 50px 0);
       left: 0;
       right: auto;
       text-align: right;
@@ -276,29 +280,29 @@ h5,
     }
 
     .icon {
-      margin-right: -3px;
-      margin-left: 20px;
+      margin-right: rem.convert(-3px);
+      margin-left: rem.convert(20px);
       border-color: $info;
     }
   }
 
   .vs-block__title {
     position: absolute;
-    top: 26px;
+    top: rem.convert(26px);
     right: 0;
     background: $primary;
     color: $white;
-    height: 70px;
+    height: rem.convert(70px);
     width: 75%;
-    padding: 10px 40px;
+    padding: rem.convert(10px 40px);
     display: flex;
     align-items: center;
-    border-radius: 50px 0 0 50px;
+    border-radius: rem.convert(50px 0 0 50px);
     margin-bottom: 0;
 
     @include media-breakpoint-down(md) {
-      height: 60px;
-      padding: 8px 30px;
+      height: rem.convert(60px);
+      padding: rem.convert(8px 30px);
     }
   }
 
@@ -324,15 +328,15 @@ h5,
   position: relative;
   border: rem.convert(3px) solid $white;
   border-radius: rem.convert(5px);
-  padding: 5px 10px 5px 74px;
-  margin: 0 0 20px 27px;
+  padding: rem.convert(5px 10px 5px 74px);
+  margin: rem.convert(0 0 20px 27px);
   height: rem.convert(76px);
   display: flex;
   align-items: center;
 
   @include media-breakpoint-down(md) {
     height: rem.convert(60px);
-    padding-left: 50px;
+    padding-left: rem.convert(50px);
   }
 
   .icon {
@@ -354,8 +358,8 @@ h5,
     overflow: hidden;
 
     @include media-breakpoint-down(md) {
-      width: 60px;
-      height: 60px;
+      width: rem.convert(60px);
+      height: rem.convert(60px);
     }
 
     img {
@@ -367,7 +371,7 @@ h5,
 }
 
 .talk-to-block {
-  height: 100vh;
+  min-height: 50vh;
   // background: url(/assets/images/img-hero.svg) no-repeat;
   // background-size: contain;
   position: relative;
@@ -407,7 +411,7 @@ h5,
 }
 
 .about-section {
-  height: 100vh;
+  min-height: 50vh;
   position: relative;
   z-index: 1;
 

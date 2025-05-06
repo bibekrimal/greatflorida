@@ -8,6 +8,9 @@
     .font#{$infix}-small {
       font-size: 0.9375rem !important;
     }
+    .font#{$infix}-body {
+      font-size: $font-size-base !important;
+    }
 
     .rounded#{$infix}-0 {
       border-radius: 0 !important;

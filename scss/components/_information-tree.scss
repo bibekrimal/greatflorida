@@ -99,7 +99,7 @@
   padding-left: rem.convert(40px);
 
   @include media-breakpoint-down(md) {
-    margin-bottom: 20px;
+    margin-bottom: rem.convert(20px);
   }
 
   &:before {

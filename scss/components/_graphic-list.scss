@@ -15,7 +15,7 @@
   // flex-direction: column;
   // padding: rem.convert(0 80px);
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: rem.convert(35px);
 
   @include media-breakpoint-down(md) {
     // display: block;
@@ -31,13 +31,13 @@
     left: 0;
     right: 0;
     // width: 100%;
-    height: 4px;
+    height: rem.convert(4px);
     background: $info;
     margin: auto;
     z-index: -1;
 
     @include media-breakpoint-down(md) {
-      top: 32px;
+      top: rem.convert(32px);
       width: 70%;
       right: auto;
       bottom: auto;
@@ -74,9 +74,9 @@
 }
 
 .graphic__list__title-holder {
-  --icon-size: 28px;
-  --icon-border: 4px;
-  --graphic-list-row-space: 80px;
+  --icon-size: 1.75rem; // 28px
+  --icon-border: 0.25rem; // 4px
+  --graphic-list-row-space: 5rem; // 80px
   width: 42.4%;
   padding: 0 var(--graphic-list-row-space);
   position: relative;
@@ -93,7 +93,7 @@
   }
 
   @include media-breakpoint-down(sm) {
-    --graphic-list-row-space: 50px;
+    --graphic-list-row-space: 3.125rem; // 50px
   }
 
   &:before,
@@ -110,7 +110,7 @@
     margin: auto;
     background: #fff url('../images/icons/icon-dollar-blue.svg') no-repeat 50%
       50%;
-    background-size: 13px 21px;
+    background-size: rem.convert(13px 21px);
 
     .graphic__list__item--blue & {
       background-image: url('../images/icons/icon-dollar.svg');
@@ -129,8 +129,8 @@
 }
 
 .graphic__list__title {
-  padding: 16px;
-  min-height: 89px;
+  padding: rem.convert(16px);
+  min-height: rem.convert(89px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,9 +140,9 @@
   @include media-breakpoint-down(md) {
     text-align: right;
     align-items: flex-end;
-    min-height: 68px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    min-height: rem.convert(68px);
+    padding-top: rem.convert(12px);
+    padding-bottom: rem.convert(12px);
   }
 }
 
@@ -161,7 +161,7 @@
 
   @include media-breakpoint-down(md) {
     text-align: right;
-    margin-top: 10px;
+    margin-top: rem.convert(10px);
     min-height: rem.convert(100px);
   }
 

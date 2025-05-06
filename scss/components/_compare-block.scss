@@ -1,5 +1,5 @@
 .compare__block {
-  padding: 10px;
+  padding: rem.convert(10px);
 
   @include media-breakpoint-down(sm) {
     position: relative;
@@ -26,12 +26,12 @@
 
   @include media-breakpoint-only(md) {
     width: 100%;
-    height: 200px;
+    height: rem.convert(200px);
   }
 
   @include media-breakpoint-only(xs) {
     width: 100%;
-    height: 200px;
+    height: rem.convert(200px);
   }
 
   img {
@@ -44,17 +44,17 @@
 }
 
 .compare__content {
-  padding: 10px 20px 10px 7.25%;
+  padding: rem.convert(10px 20px 10px 7.25%);
   flex-grow: 1;
   text-align: right;
 
   @include media-breakpoint-down(sm) {
-    padding: 15px;
+    padding: rem.convert(15px);
   }
 
   .compare__block--alt & {
     @include media-breakpoint-up(md) {
-      padding-left: 20px;
+      padding-left: rem.convert(20px);
       padding-right: 7.25%;
       text-align: left;
     }
@@ -64,35 +64,35 @@
 .compare__content__title {
   background: $primary;
   color: $white;
-  height: 70px;
-  padding: 10px 25px;
+  height: rem.convert(70px);
+  padding: rem.convert(10px 25px);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border-radius: 50px 0 0 50px;
-  margin-right: -34px;
-  margin-bottom: 10px;
+  border-radius: rem.convert(50px 0 0 50px);
+  margin-right: rem.convert(-34px);
+  margin-bottom: rem.convert(10px);
 
   @include media-breakpoint-down(sm) {
     position: absolute;
-    top: 20px;
+    top: rem.convert(20px);
     right: 0;
     margin: 0;
     height: auto;
-    min-height: 45px;
+    min-height: rem.convert(45px);
   }
 
   .compare__block--alt & {
     @include media-breakpoint-up(md) {
-      border-radius: 0 50px 50px 0;
-      margin-left: -34px;
+      border-radius: rem.convert(0 50px 50px 0);
+      margin-left: rem.convert(-34px);
       margin-right: 0;
     }
   }
 }
 
 .compare__content__description {
-  padding-left: 30px;
+  padding-left: rem.convert(30px);
   font-size: $font-size-lg;
 
   @include media-breakpoint-down(sm) {
@@ -103,7 +103,7 @@
   .compare__block--alt & {
     @include media-breakpoint-up(md) {
       padding-left: 0;
-      padding-right: 30px;
+      padding-right: rem.convert(30px);
     }
   }
 }

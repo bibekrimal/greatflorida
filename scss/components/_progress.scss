@@ -1,0 +1,54 @@
+.overlay__content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: rem.convert(270px);
+  padding: 20px 0;
+}
+.circle__container {
+  --circle-color: #{$gray};
+  --progress-color: #{$info};
+  --progress-font: 3.4375rem; // 55px
+  --progress-circle-size: 10rem; // 160px
+  --progress-circle-border: 0.625rem; // 10px
+  position: relative;
+  width: var(--progress-circle-size);
+  height: var(--progress-circle-size);
+  border-radius: 100%;
+  box-shadow: 0 0px 0 var(--progress-circle-border) var(--circle-color) inset;
+
+  @include media-breakpoint-down(md) {
+    --progress-font: 2.5rem; // 40px
+    --progress-circle-size: 7.5rem; // 120px
+    --progress-circle-border: 0.4375rem; // 7px
+  }
+}
+
+.circle__progress {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--progress-color) 0% var(--progress),
+    transparent var(--progress) 100%
+  );
+  -webkit-mask-image: radial-gradient(circle, transparent 62%, black 38%);
+  mask-image: radial-gradient(circle, transparent 62%, black 38%);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.circle__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  font-size: var(--progress-font);
+  line-height: 1;
+  font-weight: bold;
+}

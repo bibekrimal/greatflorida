@@ -16,6 +16,7 @@
   // padding: rem.convert(0 80px);
   position: relative;
   margin-bottom: rem.convert(35px);
+  z-index: 1;
 
   @include media-breakpoint-down(md) {
     // display: block;
@@ -47,6 +48,12 @@
   &.graphic__list__item--blue {
     &:before {
       background: $primary;
+    }
+  }
+
+  &.graphic__list__item--blue-alt {
+    &:before {
+      background: $gray;
     }
   }
 
@@ -115,6 +122,11 @@
     .graphic__list__item--blue & {
       background-image: url('../images/icons/icon-dollar.svg');
       border-color: $primary;
+    }
+
+    .graphic__list__item--blue-alt & {
+      background-image: url('../images/icons/icon-dollar-gray.svg');
+      border-color: $gray;
     }
   }
 

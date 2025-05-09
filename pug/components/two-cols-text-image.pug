@@ -1,4 +1,4 @@
-mixin twoColTextImg(image, title, description, alignment='default')
+mixin twoColTextImg(image, title, alignment='default', description)
   -
     // Default Classes
     let imageColClass = 'col-md-6 order-md-1 d-flex justify-content-center justify-content-md-end'
@@ -16,4 +16,7 @@ mixin twoColTextImg(image, title, description, alignment='default')
         img(src=image width="435" height="223" alt="image description")
     div(class=contentColClass)
       h2.text-info= title
-      p= description
+      if description
+        p= description
+      else
+        block

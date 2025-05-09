@@ -1,0 +1,225 @@
+extends includes/layout.pug
+include components/two-cols-text-image.pug
+include components/section-intro.pug
+include components/factors-article.pug
+include components/graphic-list.pug
+include components/full-width-section.pug
+include components/card-with-image.pug
+block vars
+  - var currentPage = "flood"
+  
+block content
+  .intro.py-3.text-center.text-md-start
+    .container
+      +twoColTextImg(
+        "assets/images/img47.jpg",
+        "Flood Insurance",
+        "leftAligned",
+        "Mandatory for some residents, but a good idea for everyone else. Flood insurance claims are growing from homes in low to medium risk areas. Storm season is never far away. Don't get caught without flood insurance. Let GreatFlorida find low-cost coverage to put your mind at ease year-round."
+      )
+  article.pt-3.pt-md-8.pb-4.pb-sm-0
+    .container
+      .row.justify-content-between
+        .col-sm-7.col-md-8.font-body.font-md-large
+          h2.text-primary Am I required to buy flood insurance in Florida?
+          p If you live in a 
+            strong high-risk flood zone 
+            | in Florida, you will be legally required to have flood insurance.
+          p If you don't live in a high-risk area, you are still not in the clear. A large number of flood insurance claims come from low and medium risk areas every year. Protect your home and valuables with an affordable flood insurance policy.
+          p Storms, flash floods, and even construction projects change how water drains and can wreak havoc on your property. Restoring your home after a flood is a massive task, financially ruining many Florida residents.
+        .col-sm-4.col-md-auto.align-self-end.d-none.d-sm-block
+          <svg width="210" height="360" class="big-question-mark">
+            <text x="0" y="358" font-size="478" line-height="1" font-weight="900" font-family="Lato, sans-serif" fill="white" stroke="#F36522" stroke-width="8">?</text>
+          </svg>
+  .orange-question-section.font-body.font-md-large
+    .container
+      .row
+        .col-sm-10.col-md-9.col-lg-7.col-xl-6
+          p.mb-4 Talk to a GreatFlorida agent today and see how affordable a minimum flood insurance policy can be.
+          a.btn.btn-info.text-uppercase(href="#") Talk to a Greatflorida Agent
+
+  section.py-3
+    .container
+      +twoColTextImg(
+        "assets/images/img48.jpg",
+        "NFIP Flood Insurance vs. Private Flood Insurance"
+      )
+        p After rising costs of flood insurance and mandatory requirements to purchase it, the National Flood Insurance Program was created. It provides affordable, government-backed coverage for flood-prone properties up to $250,000.
+        p If you need more coverage and additional policy features, private flood insurance is an ideal option for your home.
+  section.py-4
+    .container
+      +sectionIntro(
+        "Flood Insurance in Florida. What Does it Cover?",
+        "In the case of a flood, insurance can cover the cost of damages. The cost of replacing these on your own can be immense. Most people don't realize the value of everything in their home. A Florida flood insurance policy can include coverage for:",
+        "text-info"
+      )
+      .factors__section.factors__article--with-image
+        .grid
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Appliances and Essential Home Systems",
+              "Major appliances, your washer and dryer, and essential systems like the AC can all be covered with a quality flood insurance policy.",
+              "assets/images/icons/icon70.svg",
+              "assets/images/img49.jpg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Structural and Flooring Damage",
+              "Cabinets, carpets, staircases, and even unattached garages can be covered by flood insurance.",
+              "assets/images/icons/icon71.svg",
+              "assets/images/img50.jpg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Personal Property and Valuables",
+              "Your clothing, personal belongings, and valuables are all covered up to your policy limit.",
+              "assets/images/icons/icon72.svg",
+              "assets/images/img51.jpg"
+            )
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Does Flood Insurance NOT Cover?",
+        "Some effects of a flood are not covered by a policy, including:"
+      )
+      .graphic__list
+        +graphicItem(
+          "assets/images/icons/icon73.svg",
+          "Environmental Factor",
+          "Mold or mildew damage which could have been reasonably avoided is not covered under your flood insurance policy. This also includes any damage caused by earth movement, even as a result of flooding."
+        )
+        +graphicItem(
+          "assets/images/icons/icon74.svg",
+          "External Effects",
+          "Business interruption and related financial losses, are not covered under a flood policy. Neither are loss of property use or temporary housing expenses while your home is being repaired."
+        )
+        +graphicItem(
+          "assets/images/icons/icon75.svg",
+          "Certain Belongings and Assets",
+          "Vehicles, currency, and belongings kept outside of your home are not covered by flood insurance."
+        )
+  +fullWidthSection(
+    "assets/images/img52.jpg",
+    "Do I Really Need Flood Insurance?",
+    "bg-info text-white",
+    "rightAligned",
+    null,
+    "<div class='overlay__content mb-3 mb-md-0'><div class='circle__container mb-2' style='--progress: 25%'><div class='circle__progress'></div><div class='circle__text'>25%</div></div><strong class='font-body font-md-large'>of all flood claims are from low-medium risk communities</strong></div>"
+  )
+    p Florida falls into FEMA's highest level of storm frequency, with large areas at high flood risk based on FEMA assigned flood zones.
+    p Many homes are at risk due to their proximity to the coast or bodies of water. But 25% of all flood claims are from low-medium risk communities
+  section.py-5
+    .container
+      +sectionIntro(
+        "Florida Flood Zones by Risk",
+        "Florida has a high risk of flooding, but divides areas into risk categories to help homeowners and local authorities prepare for flooding. Flood zones are categorized as follows:"
+      )
+      .row
+        .col-md-6.pe-md-5.pe-lg-11
+          .pill__heading.w-100.justify-content-center.text-center.mb-4.mb-md-5 Fema flood map
+          .map-holder
+            img(src="assets/images/img53.jpg", width="435", height="435", alt="image description")
+          strong.font-lg-large.text-center.d-block.px-3.px-xl-5.py-4_5 Enter your address into the 
+            a.text-info.link-underline-info.link-underline-opacity-100.link-underline-opacity-0-hover.link-offset-2(href="http://msc.fema.gov/portal/search") FEMA Flood Map Services
+            |  to find your zone.
+        .col-md-6.pt-4.pt-md-0
+          .row.justify-content-between
+            .col-5
+              img.img-fluid(src="assets/images/img-tube.svg", width="165", height="683", alt="image description")
+            .col-7.font-body.font-md-large
+              ul.list-unstyled
+                li.mb-5.mb-md-6
+                  h3.font-body.font-md-large.mb-0 High Risk:
+                  span Mandatory insurance
+                li.mb-5.mb-md-6
+                  h3.font-body.font-md-large.mb-0 High Risk - Coastal Area:
+                  span Mandatory insurance
+                li.mb-5.mb-md-6
+                  h3.font-body.font-md-large.mb-0 Zone AR:
+                  span Temporary increased risk
+                li.mb-5.mb-md-6
+                  h3.font-body.font-md-large.mb-0 Zone V, VE, V1,-V30:
+                  span Additional hazards from storm surge
+                li.mb-5.mb-md-6
+                  h3.font-body.font-md-large.mb-0 Zone D:
+                  span Possible but undetermined risk
+                li.mb-5.mb-md-6
+                  h3.font-body.font-md-large.mb-0 Zone A, AE, A1-A30, AH, AO:
+                  span 26% Chance over 30 years
+                li.mb-5.mb-md-6
+                  h3.font-body.font-md-large.mb-0 Zone B, C, X:
+                  span Less than 1% chance
+                
+  section.py-3.bg-primary
+    .container
+      +sectionIntro(
+        "How Much is Flood Insurance in Florida?",
+        null,
+        "text-white"
+      )
+        p At GreatFlorida, we connect homeowners with insurance that's right for you. Flood insurance premiums vary due to risk and size of the home.
+          span.text-white.d-block The average annual flood insurance premium is around $700.
+        p Payment for damages during a flood can be paid in one of three ways, depending on your policy.
+      .graphic__list
+        +graphicItem(
+          "assets/images/icons/icon76.svg",
+          "Agreed Value:",
+          "The amount your policy agrees to pay, despite what the current value is.",
+          "variant-blue-alt"
+        )
+        +graphicItem(
+          "assets/images/icons/icon77.svg",
+          "Actual Cash Value:",
+          "The cost to replace, rebuild, and repair your home and belongings.",
+          "variant-blue-alt"
+        )
+        +graphicItem(
+          "assets/images/icons/icon78.svg",
+          "Replacement Cost:",
+          "The price of repairing your home after a flood.",
+          "variant-blue-alt"
+        )
+  section.py-5
+    .container
+      +sectionIntro(
+        "How to Save Money on Flood Insurance?",
+        null,
+        'text-primary'
+      )
+        p You can't pick up and move your home and move it. But you can reduce your level of flood risk with some careful planning.
+        p Taking these extra precautions can lower your premium:
+      .row.gx-lg-2
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/img54.jpg",
+            "assets/images/icons/icon79.svg",
+            "Elevate Your Home",
+            "blue"
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/img55.jpg",
+            "assets/images/icons/icon80.svg",
+            "Wet Floodproof",
+            "orange"
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/img56.jpg",
+            "assets/images/icons/icon81.svg",
+            "Dry Floodproof",
+            "blue"
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/img57.jpg",
+            "assets/images/icons/icon82.svg",
+            "Reposition Appliances",
+            "orange"
+          )
+
+  

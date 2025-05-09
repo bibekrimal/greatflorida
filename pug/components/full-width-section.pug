@@ -1,4 +1,4 @@
-mixin fullWidthSection(image, title, variant='bg-info text-white', imageAlignment='default', description=null)
+mixin fullWidthSection(image, title, variant='bg-info text-white', imageAlignment='default', description=null, imageOverlay=null)
   -
     // Base Classes
     // additional classes can be passed in as the last argument
@@ -20,8 +20,10 @@ mixin fullWidthSection(image, title, variant='bg-info text-white', imageAlignmen
     .container
       div(class=rowClass)
         .col-md-5.order-md-1.d-flex.justify-content-center.justify-content-md-end.position-relative
-          div(class=imageClass)
+          div(class=`${imageClass} ${imageOverlay ? 'bleed-with-content' : ''}`)
             img(src=image width="435" height="223" alt="image description")
+          if (imageOverlay)
+            != imageOverlay
         div(class=contentClass)
           h2= title
           if description

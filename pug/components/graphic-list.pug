@@ -10,6 +10,10 @@ mixin graphicItem(icon, title, description, variant="default")
       borderColor = 'border-info'
       bgColor = 'bg-info'
       itemClass = 'graphic__list__item graphic__list__item--blue'
+    } else if (variant === 'variant-blue-alt') {
+      borderColor = 'border-info'
+      bgColor = 'bg-info'
+      itemClass = 'graphic__list__item graphic__list__item--blue-alt'
     }
     
   div(class=itemClass)

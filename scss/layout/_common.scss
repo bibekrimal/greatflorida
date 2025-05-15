@@ -96,6 +96,12 @@ h5,
     pointer-events: none;
   }
 
+  &.bg-info {
+    &:after {
+      background-color: rgba($info, 0.3);
+    }
+  }
+
   &.image-bleed {
     position: absolute;
     top: 0;
@@ -140,6 +146,42 @@ h5,
 
   &--small {
     height: rem.convert(140px);
+  }
+}
+
+.full-banner__section {
+  min-height: rem.convert(335px);
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  @include media-breakpoint-down(md) {
+    min-height: rem.convert(200px);
+  }
+
+  .image-with-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    &:after {
+      background-color: rgba($primary, 0.4);
+    }
+  }
+
+  &.bg-info {
+    .image-with-overlay {
+      &:after {
+        background-color: rgba($info, 0.4);
+      }
+    }
   }
 }
 

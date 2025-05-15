@@ -148,6 +148,14 @@
   //   width: rem.convert(76px);
   //   height: rem.convert(76px);
   // }
+  color: #f00;
+
+  > svg {
+    fill: #f00 !important;
+    path {
+      fill: #f00 !important;
+    }
+  }
 }
 
 .factors__heading {

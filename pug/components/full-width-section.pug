@@ -1,9 +1,9 @@
-mixin fullWidthSection(image, title, variant='bg-info text-white', imageAlignment='default', description=null, imageOverlay=null)
+mixin fullWidthSection(image, title, variant='bg-info', margin=null, imageAlignment='default', description=null, overlayContent=null)
   -
     // Base Classes
     // additional classes can be passed in as the last argument
     // variant is used to set the background color and text color (use bootstrap classes)
-    let baseSectionClass = 'overflow-hidden pt-3 pt-md-0'
+    let baseSectionClass = 'overflow-hidden text-white pt-3 pt-md-0'
     let rowClass = 'row justify-content-between'
     let imageClass = 'image-with-overlay image-bleed mb-3 mb-md-0'
     let contentClass = "col-md-6 text-center font-lg-large py-3 py-md-5"
@@ -16,14 +16,14 @@ mixin fullWidthSection(image, title, variant='bg-info text-white', imageAlignmen
       contentClass += ' text-md-start'
     }
     
-  article(class=`${baseSectionClass} ${variant}`)= text
+  article(class=`${baseSectionClass} ${variant} ${margin}`)= text
     .container
       div(class=rowClass)
         .col-md-5.order-md-1.d-flex.justify-content-center.justify-content-md-end.position-relative
-          div(class=`${imageClass} ${imageOverlay ? 'bleed-with-content' : ''}`)
+          div(class=`${imageClass} ${variant} ${overlayContent ? 'bleed-with-content' : ''}`)
             img(src=image width="435" height="223" alt="image description")
-          if (imageOverlay)
-            != imageOverlay
+          if (overlayContent)
+            != overlayContent
         div(class=contentClass)
           h2= title
           if description

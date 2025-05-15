@@ -1,0 +1,84 @@
+ol.boxed-list {
+  --bs-gap: 3.625rem; // 58px
+  --bs-columns: 3;
+  --bs-row-gap: 2.25rem; // 36px
+  --counter-size: 5.5625rem; // 89px
+  --top-space: 80px;
+  @extend %listreset;
+  counter-reset: boxedList;
+  row-gap: var(--bs-row-gap);
+
+  @include media-breakpoint-down(lg) {
+    --bs-gap: 1.75rem; // 28px
+    --counter-size: 4.6875rem; // 75px
+    --top-space: 60px;
+  }
+
+  @include media-breakpoint-down(md) {
+    --counter-size: 3.75rem; // 60px
+    --top-space: 30px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    --bs-columns: 2;
+    --bs-gap: 1rem;
+  }
+
+  > li {
+    counter-increment: boxedList;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 4px solid $info;
+    min-height: 76px;
+    margin-top: var(--top-space);
+    padding: 10px;
+    &:before {
+      content: counter(boxedList, decimal-leading-zero);
+      background: $primary;
+      color: $white;
+      width: var(--counter-size);
+      height: var(--counter-size);
+      border-radius: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: rem.convert(36px);
+      line-height: 1;
+      font-weight: bold;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto -10px;
+
+      @include media-breakpoint-down(lg) {
+        font-size: rem.convert(30px);
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: rem.convert(25px);
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 4px auto 0;
+      right: 100%;
+      width: var(--bs-gap);
+      height: 4px;
+      background: $gray;
+    }
+    &:nth-child(3n + 1) {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

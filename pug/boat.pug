@@ -1,0 +1,218 @@
+extends includes/layout.pug
+include components/two-cols-text-image.pug
+include components/section-intro.pug
+include components/factors-article.pug
+include components/full-width-section.pug
+include components/boxed-list.pug
+include components/row-with-pill-image-text.pug
+include components/graphic-list.pug
+//- include components/talk-to-us.pug
+//- include components/full-banner-text.pug
+block vars
+  - var currentPage = "boat"
+  
+block content
+  .intro.py-3.text-center.text-md-start
+    .container
+      +twoColTextImg(
+        "assets/images/boat/img1.jpg",
+        "Boat and Watercraft Insurance",
+        "leftAligned",
+        "Whether you own a luxury yacht or a playful jet ski, boat insurance protects your investment and covers your liability in case of an accident. Personal watercraft and commercial charter boats have different policy needs. Let your local GreatFlorida agent build the perfect policy for coverage on and off the water."
+      )
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Does Boat Insurance in Florida Cover?",
+        "Get high-quality coverage and enjoy the water without worry. Some of the most common boat policies include the following coverage:",
+        "text-primary"
+      )
+      .factors__section.factors__article--with-image
+        .grid
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Physical Damage",
+              "Vital coverage for the hull, structure, sails, machinery, and other furnishings and equipment on board your vessel.",
+              "assets/images/boat/icons/icon1.svg",
+              "assets/images/boat/img2.jpg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Collision or Sinking",
+              "A boaters nightmare. Protect your investment and life on the water with coverage against collision and sinking.",
+              "assets/images/boat/icons/icon2.svg",
+              "assets/images/boat/img3.jpg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Comprehensive Coverage",
+              "Covers boat losses not caused by collision. This can include theft, fire, vandalism, and other destructive incidents.",
+              "assets/images/boat/icons/icon3.svg",
+              "assets/images/boat/img4.jpg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Bodily Injury or Death",
+              "Medical costs from boating incidents are high. Cover costs from injury or death to people aboard vessels you damage, or your own.",
+              "assets/images/boat/icons/icon4.svg",
+              "assets/images/boat/img5.jpg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Liability",
+              "Provides coverage for physical damage you cause to other vessels, docks, and property.",
+              "assets/images/boat/icons/icon5.svg",
+              "assets/images/boat/img6.jpg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Boat Trailer",
+              "Valuable protection against loss or damage while towing your boat.",
+              "assets/images/boat/icons/icon6.svg",
+              "assets/images/boat/img7.jpg"
+            )
+  +fullWidthSection(
+    "assets/images/boat/img8.jpg",
+    "What Extra Boat Insurance Coverage is Available?",
+    "bg-primary",
+    null,
+    "rightAligned"
+  )
+    ol.circle__numberlist
+      li Standard policies cover your boat for physical damage and collision. But extra coverage can further protect your vessel and your lifestyle. 
+
+      li You might bring expensive fishing equipment and valuable personal items along while boating. Additional coverage options protect against this loss of valuable property.
+
+      li As so many boaters in Florida go without insurance, adding coverage for uninsured boaters can help protect your vessel.
+      
+      li Boat insurance is not required by law. Don't rely on other people. Protect your boat with your own policy.
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Types of Boats Can GreatFlorida Help You Insure?",
+        "GreatFlorida agents are local and understand the diversity of life on the water. We offer coverage for the following vessels:",
+        "text-info"
+      )
+      +boxedList(
+        "Bow Rider",
+        "Center Consoles",
+        "Cuddy Cabin",
+        "Walk Around",
+        "Ski Boats",
+        "Pontoon",
+        "Jet Boats",
+        "Personal Watercraft",
+        "Sailboats",
+        "Bass Boats",
+        "Commercial Vessels",
+        "Private Pleasure Craft"
+      )
+  +fullWidthSection(
+    "assets/images/boat/img9.jpg",
+    "Is My Boat Covered Out of the Water?",
+    "bg-info",
+    null,
+    "leftAligned"
+  )
+    p If your policy includes Physical Damage Coverage 
+      strong.d-block (Comprehensive and Collision), 
+      | your boat will be protected out of the water.
+    p Some coverages will only be valid while on the water. Talk to your local GreatFlorida agent for specific details on the best.
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Are the factors that affect boat insurance premiums?",
+        "Insurers calculate your rates based on your vessel, boating history, and personal information. Some factors that affect your premium include:",
+        "text-info"
+      )
+      .py-3
+        +rowWithPillImageText(
+          "assets/images/boat/img10.jpg",
+          "assets/images/boat/icons/icon7.svg",
+          "Age & gender",
+          "In line with other insurance policies, women and older people will enjoy the best boat insurance rates."
+        )
+        +rowWithPillImageText(
+          "assets/images/boat/img11.jpg",
+          "assets/images/boat/icons/icon8.svg",
+          "Horsepower",
+          "The more powerful your boat, the more risky it is to insure. A less powerful boat can save you money in premiums."
+        )
+        +rowWithPillImageText(
+          "assets/images/boat/img12.jpg",
+          "assets/images/boat/icons/icon9.svg",
+          "Driving Record",
+          "A history of driving violations on the road will signal to insurers you may be a risk on the water."
+        )
+        +rowWithPillImageText(
+          "assets/images/boat/img13.jpg",
+          "assets/images/boat/icons/icon10.svg",
+          "Usage",
+          "Using your boat for parasailing or towing skiers will lead to higher insurance costs."
+        )
+        +rowWithPillImageText(
+          "assets/images/boat/img14.jpg",
+          "assets/images/boat/icons/icon11.svg",
+          "Experience",
+          "Well experienced boaters can enjoy lower premiums. Newer boat enthusiasts can pay more to begin with, but see reductions over time."
+        )
+        +rowWithPillImageText(
+          "assets/images/boat/img15.jpg",
+          "assets/images/boat/icons/icon12.svg",
+          "Safety Measures",
+          "The more coast guard approved gear you have on board, the lower your risk and your insurance rates."
+        )
+        +rowWithPillImageText(
+          "assets/images/boat/img16.jpg",
+          "assets/images/boat/icons/icon13.svg",
+          "Boat Specs",
+          "The size, make, model, and motor of your boat all affect your final premium."
+        )
+        +rowWithPillImageText(
+          "assets/images/boat/img17.jpg",
+          "assets/images/boat/icons/icon14.svg",
+          "Credit Score",
+          "A high credit score can save you money on your boat insurance in Florida."
+        )
+        +rowWithPillImageText(
+          "assets/images/boat/img18.jpg",
+          "assets/images/boat/icons/icon15.svg",
+          "Claims History",
+          "Previous claims can indicate more risk to an insurer, leading to a higher cost for coverage. If you are claim-free, you can benefit from a lower rate."
+        )
+  section.py-3.bg-primary
+    .container
+      +sectionIntro(
+        "Different Types of Boat Insurance Coverage in Florida",
+        null,
+        "text-white"
+      )
+        p A boat's value constantly depreciates, just like a car. Most insurance policies adapt your coverage amount to the market value of your boat. If you want coverage for a higher price, additional options are available.
+        p In the event of a loss, payment is calculated based on the type of insurance stated in your policy.
+      .graphic__list
+        +graphicItem(
+          "assets/images/icons/icon76.svg",
+          "Agreed Value:",
+          "In the event of total loss, you will receive the amount stated in your policy. In this case, there is no reduction for depreciation.",
+          "variant-blue-alt"
+        )
+        +graphicItem(
+          "assets/images/icons/icon77.svg",
+          "Actual Cash Value:",
+          "If your boat is a total loss, your policy will pay the current value of your boat after depreciation.",
+          "variant-blue-alt"
+        )
+        +graphicItem(
+          "assets/images/icons/icon78.svg",
+          "Replacement Cost:",
+          "Reimbursement for the repair of your vessel or the cost of replacement of the same make and model. This policy is only available for the first few years of coverage.",
+          "variant-blue-alt"
+        )

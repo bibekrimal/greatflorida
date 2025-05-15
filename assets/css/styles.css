@@ -172,7 +172,7 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
-.faq__item__content ul {
+ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1913,6 +1913,127 @@
   font-size: var(--progress-font);
   line-height: 1;
   font-weight: bold;
+}
+
+ol.circle__numberlist {
+  counter-reset: circleNumberList;
+}
+ol.circle__numberlist > li {
+  counter-increment: circleNumberList;
+  position: relative;
+  margin-bottom: 1.75rem;
+  padding-left: 3.125rem;
+}
+@media (max-width: 767.98px) {
+  ol.circle__numberlist > li {
+    text-align: left;
+  }
+}
+ol.circle__numberlist > li:before {
+  content: counter(circleNumberList);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  color: #dadbe0;
+  line-height: 1;
+  font-weight: bold;
+  border: 3px solid #dadbe0;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+ol.boxed-list {
+  --bs-gap: 3.625rem;
+  --bs-columns: 3;
+  --bs-row-gap: 2.25rem;
+  --counter-size: 5.5625rem;
+  --top-space: 80px;
+  counter-reset: boxedList;
+  row-gap: var(--bs-row-gap);
+}
+@media (max-width: 991.98px) {
+  ol.boxed-list {
+    --bs-gap: 1.75rem;
+    --counter-size: 4.6875rem;
+    --top-space: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  ol.boxed-list {
+    --counter-size: 3.75rem;
+    --top-space: 30px;
+  }
+}
+@media (max-width: 575.98px) {
+  ol.boxed-list {
+    --bs-columns: 2;
+    --bs-gap: 1rem;
+  }
+}
+ol.boxed-list > li {
+  counter-increment: boxedList;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 4px solid #49bcfc;
+  min-height: 76px;
+  margin-top: var(--top-space);
+  padding: 10px;
+}
+ol.boxed-list > li:before {
+  content: counter(boxedList, decimal-leading-zero);
+  background: #f36522;
+  color: #fff;
+  width: var(--counter-size);
+  height: var(--counter-size);
+  border-radius: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: bold;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto -10px;
+}
+@media (max-width: 991.98px) {
+  ol.boxed-list > li:before {
+    font-size: 1.875rem;
+  }
+}
+@media (max-width: 767.98px) {
+  ol.boxed-list > li:before {
+    font-size: 1.5625rem;
+  }
+}
+ol.boxed-list > li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 4px auto 0;
+  right: 100%;
+  width: var(--bs-gap);
+  height: 4px;
+  background: #dadbe0;
+}
+ol.boxed-list > li:nth-child(3n+1):after {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

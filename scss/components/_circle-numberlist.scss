@@ -1,0 +1,35 @@
+ol.circle__numberlist {
+  @extend %listreset;
+  counter-reset: circleNumberList;
+  > li {
+    counter-increment: circleNumberList;
+    position: relative;
+    margin-bottom: rem.convert(28px);
+    padding-left: rem.convert(50px);
+
+    @include media-breakpoint-down(md) {
+      text-align: left;
+    }
+
+    &:before {
+      content: counter(circleNumberList);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      width: 28px;
+      height: 28px;
+      background: $white;
+      color: $gray;
+      line-height: 1;
+      font-weight: bold;
+      border: 3px solid $gray;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

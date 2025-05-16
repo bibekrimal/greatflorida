@@ -3,13 +3,15 @@
   color: $white;
   text-transform: uppercase;
   font-size: rem.convert(20px);
+  line-height: 1.2;
   font-weight: bold;
   border-radius: 50rem;
   width: rem.convert(480px);
   max-width: 100%;
-  min-height: rem.convert(77px); // 76px
+  min-height: rem.convert(78px); // 76px
   // padding: 0.5rem 1.5rem; // 8px 24px
-  padding: rem.convert(8px 20px);
+  padding: rem.convert(3px 20px);
+  // padding: rem.convert(0 20px);
   position: relative;
   display: flex;
   align-items: center;

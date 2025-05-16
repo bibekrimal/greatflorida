@@ -1,0 +1,149 @@
+extends includes/layout.pug
+include components/two-cols-text-image.pug
+include components/section-intro.pug
+include components/factors-article.pug
+include components/full-width-section.pug
+//- include components/boxed-list.pug
+include components/row-with-pill-image-text.pug
+include components/card-with-image.pug
+//- include components/graphic-list.pug
+block vars
+  - var currentPage = "motorcycle"
+  
+block content
+  .intro.py-3.text-center.text-md-start
+    .container
+      +twoColTextImg(
+        "assets/images/motorcycle/img1.jpg",
+        "Motorcycle Insurance",
+        "leftAligned",
+        "Enjoy Florida's endless summer with long rides and a great biking community. Your bike is your ticket to freedom. Protect it with a customized, affordable insurance policy and ride into the sunset with confidence."
+      )
+      +twoColTextImg(
+        "assets/images/motorcycle/img2.jpg",
+        "Do I Need Motorcycle Insurance?",
+        "rightAligned"
+      )
+        p Motorcycle insurance is not required by law. But you can still be held financially liable in the event of an accident. Even if you don't hit anybody, if you total your bike, your riding lifestyle is gone.
+        p Stay prepared with insurance coverage built just for you and your bike. Protecting your investment in freedom is easy and affordable.
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Does Motorcycle Insurance Cover?",
+        "Motorcycle insurance in Florida offers a range of coverage options, including:",
+        "text-info"
+      )
+      .py-3
+        +rowWithPillImageText(
+          "assets/images/motorcycle/img3.jpg",
+          "assets/images/motorcycle/icons/icon1.svg",
+          "Bodily Injury Liability Coverage",
+          "In the event of an injury or fatality while riding, bodily injury liability coverage protects you from the high medical bills and legal costs resulting from an accident."
+        )
+        +rowWithPillImageText(
+          "assets/images/motorcycle/img4.jpg",
+          "assets/images/motorcycle/icons/icon2.svg",
+          "Collision Coverage",
+          "With collision coverage, damage to your bike will be covered regardless of who is at fault for an accident."
+        )
+        +rowWithPillImageText(
+          "assets/images/motorcycle/img5.jpg",
+          "assets/images/motorcycle/icons/icon3.svg",
+          "Accessories Damage",
+          "Damages to accessories can be costly to repair. Accessory coverage is an extra option with your motorcycle insurance to get you back on the road as quickly as possible."
+        )
+        +rowWithPillImageText(
+          "assets/images/motorcycle/img6.jpg",
+          "assets/images/motorcycle/icons/icon4.svg",
+          "Comprehensive Physical Damage",
+          "An accident isn't the only reason a motorcycle needs coverage. Your bike needs coverage against vandalism and theft."
+        )
+        +rowWithPillImageText(
+          "assets/images/motorcycle/img7.jpg",
+          "assets/images/motorcycle/icons/icon5.svg",
+          "Uninsured/Under-insured Motorist Coverage",
+          "You can't control how other people behave. And you can't ensure everyone on the road has vehicle insurance. Uninsured motorist coverage has your back if you collide with somebody without insurance."
+        )
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Types of Medical Coverage Exist for Motorcycle Insurance?",
+        "Medical costs after an accident can financially ruin a liable party. Protect yourself and your passengers with three types of medical coverage:",
+        "text-info"
+      )
+      .factors__section
+        .grid
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Medical Payments",
+              null,
+              "assets/images/motorcycle/icons/icon6.svg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "No Fault",
+              null,
+              "assets/images/motorcycle/icons/icon7.svg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Personal Injury",
+              null,
+              "assets/images/motorcycle/icons/icon8.svg"
+            )
+  +fullWidthSection(
+    "assets/images/motorcycle/img8.jpg",
+    "Is Motorcycle Insurance Required by Law?",
+    "bg-primary",
+    null,
+    "leftAligned"
+  )
+    p Motorcycle insurance is not required by law in Florida. But riders are liable for any damages and injuries they cause and must show financial responsibility to be able to pay.
+    p The easiest way to show financial responsibility is to purchase motorcycle insurance. Florida has one of the highest rate of auto accidents. Don't leave yourself on the hook for unlimited expenses. A local GreatFlorida Insurance agent can find a low-cost that protects your ride.
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Types Of Bikes Are Covered with Florida Motorcycle Insurance?",
+        "Most motorcycle insurance customers are looking for motorcycle, moped, or scooter coverage. But GreatFlorida can customize specialist policies for the following:",
+        "text-info"
+      )
+      .row.gx-lg-2
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/motorcycle/img9.jpg",
+            "assets/images/motorcycle/icons/icon9.svg",
+            "Dirt Bike Insurance",
+            "blue"
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/motorcycle/img10.jpg",
+            "assets/images/motorcycle/icons/icon10.svg",
+            "Trike Coverage",
+            "orange"
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/motorcycle/img11.jpg",
+            "assets/images/motorcycle/icons/icon11.svg",
+            "Harley Davidson Policies",
+            "blue"
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/motorcycle/img12.jpg",
+            "assets/images/motorcycle/icons/icon12.svg",
+            "Motocross Insurance",
+            "orange"
+          )
+      .text-center.font-body.font-md-large.pb-2.py-md-4
+        p Don't see your type of bike listed above? Not to worry! GreatFlorida Insurance can find a policy to match your needs.
+        p Call our local Florida agents at 
+          a.font-weight-bold.tel-link(href="tel:8884787801") (888)-478-7801
+          |  and make sure you and your passengers can enjoy riding with confidence.
+      
+      

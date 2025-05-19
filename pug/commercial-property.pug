@@ -1,0 +1,187 @@
+extends includes/layout.pug
+include components/two-cols-text-image.pug
+include components/section-intro.pug
+include components/factors-article.pug
+include components/graphic-list.pug
+include components/row-with-pill-image-text.pug
+include components/card-with-image.pug
+//- include components/full-width-section.pug
+//- include components/boxed-list.pug
+//- include components/full-banner-text.pug
+block vars
+  - var currentPage = "commercial property"
+  
+block content
+  .intro.py-3.text-center.text-md-start
+    .container
+      +twoColTextImg(
+        "assets/images/commercial-property/img1.jpg",
+        "What is Commercial Property Insurance?​",
+        "leftAligned",
+        "Commercial property insurance provides coverage for your business's physical assets against risks such as fire, theft, vandalism, and certain natural disasters. Whether you own or lease your workspace, this insurance ensures that your business can recover swiftly from property-related setbacks.​"
+      )
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Does Commercial Property Insurance Cover?",
+        "A robust commercial property insurance policy typically includes coverage for:",
+        "text-primary"
+      )
+      .factors__section.factors__article--with-image
+        .grid
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Buildings and Structures",
+              "Protection for the physical premises, including walls, roofs, and permanent fixtures.",
+              "assets/images/commercial-property/icons/icon1.svg",
+              "assets/images/commercial-property/img2.jpg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Business Personal Property",
+              "Coverage for movable assets like furniture, equipment, inventory, and supplies.",
+              "assets/images/commercial-property/icons/icon2.svg",
+              "assets/images/commercial-property/img3.jpg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Equipment and Machinery",
+              "Protection for essential operational tools and machinery against covered perils.",
+              "assets/images/commercial-property/icons/icon3.svg",
+              "assets/images/commercial-property/img4.jpg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Inventory",
+              "Safeguards your stock of goods, whether stored on-site or in transit.",
+              "assets/images/commercial-property/icons/icon4.svg",
+              "assets/images/commercial-property/img5.jpg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Loss of Income",
+              "Compensation for lost revenue if your business operations are interrupted due to a covered event.",
+              "assets/images/commercial-property/icons/icon5.svg",
+              "assets/images/commercial-property/img6.jpg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Improvements and Betterments",
+              "Coverage for enhancements made to leased spaces, such as custom installations or upgrades.",
+              "assets/images/commercial-property/icons/icon6.svg",
+              "assets/images/commercial-property/img7.jpg"
+            )
+  section.py-3.bg-primary
+    .container
+      +sectionIntro(
+        "Why is Commercial Property Insurance Essential in Florida?",
+        "Florida's unique climate and geographical location expose businesses to specific risks:",
+        "text-white"
+      )
+      .graphic__list
+        +graphicItem(
+          "assets/images/commercial-property/icons/icon7.svg",
+          "Hurricanes and Tropical Storms:",
+          "High winds and flooding can cause significant damage to properties.",
+          "variant-blue-alt"
+        )
+        +graphicItem(
+          "assets/images/commercial-property/icons/icon8.svg",
+          "Flooding:",
+          "Heavy rains and rising sea levels increase the risk of flood-related damages.",
+          "variant-blue-alt"
+        )
+        +graphicItem(
+          "assets/images/commercial-property/icons/icon9.svg",
+          "Fire Hazards:",
+          "Dry conditions and electrical issues can lead to unexpected fires.",
+          "variant-blue-alt"
+        )
+      +descriptionText()
+        | Having comprehensive commercial property insurance ensures that your business is prepared for these challenges, minimizing downtime and financial loss.
+  section.py-3
+    .container
+      +sectionIntro(
+        "Factors Influencing Commercial Property Insurance Premiums",
+        "Several elements determine the cost of your commercial property insurance:",
+        "text-info"
+      )
+      .py-3
+        +rowWithPillImageText(
+          "assets/images/commercial-property/img8.jpg",
+          "assets/images/commercial-property/icons/icon10.svg",
+          "Location",
+          "Proximity to coastlines or flood-prone areas can affect premiums."
+        )
+        +rowWithPillImageText(
+          "assets/images/commercial-property/img9.jpg",
+          "assets/images/commercial-property/icons/icon11.svg",
+          "Building Characteristics",
+          "Age, construction materials, and safety features of your property play a role."
+        )
+        +rowWithPillImageText(
+          "assets/images/commercial-property/img10.jpg",
+          "assets/images/commercial-property/icons/icon12.svg",
+          "Type of Business",
+          "Certain industries may have higher risk profiles."
+        )
+        +rowWithPillImageText(
+          "assets/images/commercial-property/img11.jpg",
+          "assets/images/commercial-property/icons/icon13.svg",
+          "Coverage Limits and Deductibles",
+          "Higher coverage limits and lower deductibles typically result in higher premiums."
+        )
+        +rowWithPillImageText(
+          "assets/images/commercial-property/img12.jpg",
+          "assets/images/commercial-property/icons/icon14.svg",
+          "Claims History",
+          "A history of frequent claims can influence your insurance rates."
+        )
+  section.py-3
+    .container
+      +sectionIntro(
+        "Enhancing Your Policy with Additional Coverages",
+        "To further protect your business, consider these supplementary coverages:",
+        "text-primary"
+      )
+      .row.gx-lg-2
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-property/img13.jpg",
+            "assets/images/commercial-property/icons/icon15.svg",
+            "Business Interruption Insurance",
+            "blue",
+            "Covers lost income and operating expenses if your business is temporarily closed due to a covered loss."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-property/img14.jpg",
+            "assets/images/commercial-property/icons/icon16.svg",
+            "Equipment Breakdown Coverage",
+            "orange",
+            "Protects against mechanical or electrical failures of essential equipment."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-property/img15.jpg",
+            "assets/images/commercial-property/icons/icon17.svg",
+            "Flood Insurance",
+            "blue",
+            "Standard policies often exclude flood damage; adding this ensures comprehensive protection."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-property/img16.jpg",
+            "assets/images/commercial-property/icons/icon18.svg",
+            "Ordinance or Law Coverage",
+            "orange",
+            "Covers costs to rebuild or repair in compliance with current building codes."
+          )

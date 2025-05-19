@@ -1,0 +1,274 @@
+extends includes/layout.pug
+include components/two-cols-text-image.pug
+include components/section-intro.pug
+include components/card-with-image.pug
+include components/factors-article.pug
+include components/full-width-section.pug
+include components/boxed-list.pug
+include components/full-banner-text.pug
+block vars
+  - var currentPage = "commercial auto"
+  
+block content
+  .intro.py-3.text-center.text-md-start
+    .container
+      +twoColTextImg(
+        "assets/images/commercial-auto/img1.jpg",
+        "Commercial Auto Insurance",
+        "leftAligned",
+        "When you or your employees hit the road for business, you are at risk. Protect your assets and your people with a commercial insurance policy you can count on. Florida has a high rate of auto accidents and the more time you spend on the road, the more exposed to liability you become."
+      )
+      +twoColTextImg(
+        "assets/images/commercial-auto/img2.jpg",
+        "Why Do I Need Commercial Auto Insurance?",
+        "rightAligned"
+      )
+        p If you or your employees drive a car, truck, or any other vehicle for business, it needs to be insured for commercial use.
+        p Commercial policies cover bodily injury and property damage just like your personal auto insurance. But they also protect your employees with additional coverage like 
+          strong workers compensation 
+          | and a 
+          strong business owners policy.
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Activities Need Commercial Auto Insurance in Florida?",
+        "If you or your employees use a car for any work-related activity, you generally need commercial auto insurance in Florida. Your personal policy will not fully cover you while driving for any business purposes. If your business uses vehicles for any of the following, you will need larger policy limits for your commercial policy.",
+        "text-info"
+      )
+      .row.gx-lg-2
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-auto/img3.jpg",
+            "assets/images/commercial-auto/icons/icon1.svg",
+            "Transport",
+            "blue",
+            "Transporting goods or people for a fee, or using a car to offer services."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-auto/img4.jpg",
+            "assets/images/commercial-auto/icons/icon2.svg",
+            "Dangerous Nature",
+            "orange",
+            "Carrying oversized loads or moving hazardous materials like fuel and other flammable chemicals."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-auto/img5.jpg",
+            "assets/images/commercial-auto/icons/icon3.svg",
+            "Hauling",
+            "blue",
+            "Towing a trailer or moving heavy, oversized materials for business."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-auto/img6.jpg",
+            "assets/images/commercial-auto/icons/icon4.svg",
+            "Employee Drivers",
+            "orange",
+            "Employees driving vehicles registered to your business."
+          )
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Does Commercial Auto Insurance in Florida Cover?",
+        "Typical Florida commercial auto insurance covers your business for collisions, property damage, combined single limit coverage, comprehensive physical damage, bodily injury, uninsured motorist, medical payments, no-fault, and personal injury claims. But what do these coverage protect you from?",
+        "text-info"
+      )
+      .factors__section
+        .grid
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Collision & Property Damage",
+              "Provides coverage when your vehicle accidentally damages another person’s property. It also pays for damage to your car or truck when it hits or is hit by another object.",
+              "assets/images/commercial-auto/icons/icon5.svg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Combined Single Limit",
+              "Provides a single limit per claim, no matter how many people are involved or how much damage is done.",
+              "assets/images/commercial-auto/icons/icon6.svg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Comprehensive Physical Damage",
+              "Replaces or pays for damage to your vehicle after theft, vandalism, flood, fire, or other incident.",
+              "assets/images/commercial-auto/icons/icon7.svg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Bodily Injury Liability",
+              "Coverage for claims of bodily injury or death when you, your employee, or business is found at fault.",
+              "assets/images/commercial-auto/icons/icon8.svg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Uninsured Motorist",
+              "Vital coverage for injuries and select property damage caused by uninsured or a hit-and-run drivers.",
+              "assets/images/commercial-auto/icons/icon9.svg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Medical Payments, No Fault, & Personal Injury",
+              "Covers driver and passenger medical expenses after an accident, regardless of fault.",
+              "assets/images/commercial-auto/icons/icon10.svg"
+            )
+  +fullWidthSection(
+    "assets/images/commercial-auto/img7.jpg",
+    "Add Optional Underinsured Motorist Coverage to Your Policy",
+    "bg-primary",
+    null,
+    "leftAligned",
+    "Many Florida drivers carry insurance with only legally required limits for liability. This coverage is not always sufficient to pay for substantial damages to your vehicle or employees. Add underinsured motorist insurance and protect your business from at-fault drivers with insufficient coverage."
+  )
+  section.py-3
+    .container
+      +sectionIntro(
+        "What About Commercial Truck Insurance Policies?",
+        "Good truck coverage is vital to protect you and your employees. Your business is in safe hands at GreatFlorida. Our agents customize policies, finding business owners like you the most affordable and protective coverage.",
+        "text-primary"
+      )
+      .row.gx-lg-2
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-auto/img8.jpg",
+            "assets/images/commercial-auto/icons/icon11.svg",
+            "Tow Truck",
+            "blue"
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-auto/img9.jpg",
+            "assets/images/commercial-auto/icons/icon12.svg",
+            "Bobtail",
+            "orange"
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-auto/img10.jpg",
+            "assets/images/commercial-auto/icons/icon13.svg",
+            "Motor Truck Cargo",
+            "blue"
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/commercial-auto/img11.jpg",
+            "assets/images/commercial-auto/icons/icon14.svg",
+            "Non-Trucking",
+            "orange"
+          )
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Types of Commercial Vehicle Can We Help You insure?",
+        "Businesses rely on all different types of vehicles to serve their customers, and GreatFlorida has you covered for all of them. Some of the most common vehicles include:",
+        "text-info"
+      )
+      +boxedList(
+        "Garage & Dump Trucks",
+        "Flatbed Trucks",
+        "Box Trucks",
+        "Tank Trucks",
+        "Tow Trucks",
+        "Front Loader Trucks",
+        "Pick Up Trucks",
+        "Semi Trucks",
+        "Cars, Vans, & SUVs"
+      )
+  +fullWidthSection(
+    "assets/images/commercial-auto/img12.jpg",
+    "Do All of My Employees Need to Have Clean Driving Records?",
+    "bg-info",
+    "mb-5",
+    "leftAligned",
+    "Yes. Commercial auto and truck insurance policies require a clean driving record for coverage. That means no violations or points on employee licenses."
+  )
+  +fullWidthSection(
+    "assets/images/commercial-auto/img13.jpg",
+    "How Much Does Commercial Auto Insurance Cost?",
+    "bg-primary",
+    null,
+    "rightAligned",
+    "Your commercial auto premium is unique to your circumstances. The size of your business, the work you do, and your claims history are just a few factors that affect your premium."
+  )
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Determines Your Commercial Insurance Rate?",
+        "Insurers conduct a thorough risk assessment for every client who buys a policy. This gives you a personalized rate. Some factors taken into consideration include:",
+        "text-primary"
+      )
+      .factors__section.factors__article--with-image
+        .grid
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Coverage & Deductible",
+              "Higher deductibles and lower liability limits can reduce your premium rates.",
+              "assets/images/commercial-auto/icons/icon15.svg",
+              "assets/images/commercial-auto/img14.jpg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Cargo Type",
+              "If you haul valuable, oversized, or hazardous loads, your premiums will be higher.",
+              "assets/images/commercial-auto/icons/icon16.svg",
+              "assets/images/commercial-auto/img15.jpg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Number of Drivers",
+              "As your business grows, more employee drivers will increase insurance rates.",
+              "assets/images/commercial-auto/icons/icon17.svg",
+              "assets/images/commercial-auto/img16.jpg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Vehicle Type",
+              "Large, heavy, and expensive trucks cost more to insure.",
+              "assets/images/commercial-auto/icons/icon18.svg",
+              "assets/images/commercial-auto/img17.jpg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Credit History",
+              "Enjoy lower premiums with a good credit history.",
+              "assets/images/commercial-auto/icons/icon19.svg",
+              "assets/images/commercial-auto/img18.jpg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Previous Claims",
+              "Your history of filing claims will affect your future premiums.",
+              "assets/images/commercial-auto/icons/icon20.svg",
+              "assets/images/commercial-auto/img19.jpg"
+            )
+  +fullWidthSection(
+    "assets/images/commercial-auto/img20.jpg",
+    "GreatFlorida Offers Flexible Payment Plans to Business Owners",
+    "bg-primary",
+    "mb-3 mb-md-5",
+    "leftAligned",
+    "Paying for your commercial auto insurance doesn't have to put the brakes on your business growth. Flexible payment options are available with GreatFlorida. Save money with one time payments or enjoy a budget friendly payment plan."
+  )
+  +fullBannerText(
+    "assets/images/commercial-auto/img21.jpg",
+    "Easy, low-cost and worry-free Commercial Insurance Protect Your Business Assets with a Customized GreatFlorida Policy",
+    "blue",
+    "mb-3 mb-md-5"
+  )

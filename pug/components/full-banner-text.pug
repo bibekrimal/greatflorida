@@ -1,6 +1,6 @@
-mixin fullBannerText(image, text, variant='default')
-  div(class=`full-banner__section py-3 text-white ${variant === 'blue' ? 'bg-info' : 'bg-primary'}`)
+mixin fullBannerText(image, text, variant='default', margin=null)
+  div(class=`full-banner__section py-3 text-white ${variant === 'blue' ? 'bg-info' : 'bg-primary'} ${margin}`)
     .container
       .image-with-overlay
         img(src=image, alt="image description", width="1440")
-      h2.h1= text
+      h2.h1.text-uppercase.px-lg-8= text

@@ -1,0 +1,169 @@
+extends includes/layout.pug
+include components/compare-block.pug
+//- include components/two-cols-text-image.pug
+include components/section-intro.pug
+//- include components/factors-article.pug
+include components/graphic-list.pug
+include components/full-width-section.pug
+include components/information-box.pug
+//- include components/row-with-pill-image-text.pug
+//- include components/card-with-image.pug
+block vars
+  - var currentPage = "bop"
+  
+block content
+  +compareBlock(
+    "What is a Business Owners Policy?",
+    "A Business Owners Policy combines two major types of coverage into a single package:",
+    "assets/images/bop/img1.jpg",
+    "Property Insurance",
+    "Covers physical assets like your building, equipment, inventory, and furnishings.",
+    "assets/images/bop/img2.jpg",
+    "General Liability Insurance",
+    "Protects against claims of bodily injury, property damage, and personal/advertising injury."
+  )
+    +descriptionText("pt-4_5")
+        | With one policy, you safeguard your business against common risks—allowing you to focus on growth, not uncertainty.
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Does a BOP Cover?",
+        null,
+        "text-primary"
+      )
+      section.py-4
+        h3.h5.text-uppercase Property Coverage
+        +graphicItem(
+          "assets/images/bop/icons/icon1.svg",
+          "Buildings & Structures",
+          "Whether you own or lease, the structure housing your business is protected from fire, theft, vandalism, and more.",
+          "variant-primary"
+        )
+        +graphicItem(
+          "assets/images/bop/icons/icon2.svg",
+          "Business Personal Property",
+          "Covers equipment, furniture, inventory, and fixtures inside your premises.",
+          "variant-primary"
+        )
+        +graphicItem(
+          "assets/images/bop/icons/icon3.svg",
+          "Loss of Income",
+          "If your business is forced to close due to a covered loss, this helps replace lost income and covers operating expenses.",
+          "variant-primary"
+        )
+      section.py-4
+        h3.h5.text-uppercase Liability Coverage
+        +graphicItem(
+          "assets/images/bop/icons/icon4.svg",
+          "Bodily Injury & Property Damage",
+          "Protects you if a customer is injured on your property or if your operations cause damage to someone else’s property.",
+          "variant-primary"
+        )
+        +graphicItem(
+          "assets/images/bop/icons/icon5.svg",
+          "Products & Completed Operations",
+          "Covers claims related to products you sell or services you provide after the work is done.",
+          "variant-primary"
+        )
+        +graphicItem(
+          "assets/images/bop/icons/icon6.svg",
+          "Personal & Advertising Injury",
+          "Protects against claims of libel, slander, copyright infringement, or false advertising.",
+          "variant-primary"
+        )
+  +fullWidthSection(
+    "assets/images/bop/img3.jpg",
+    "Optional Coverages You Can Add",
+    "bg-info",
+    "mb-5",
+    "rightAligned"
+  )
+    p GreatFlorida agents can help you tailor your BOP with extra protection, including:
+    +informationBox(
+      "assets/images/bop/icons/icon7.svg",
+      "Professional Liability (Errors & Omissions)"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon8.svg",
+      "Data Breach/Cyber Liability"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon9.svg",
+      "Employee Dishonesty"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon10.svg",
+      "Equipment Breakdown"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon11.svg",
+      "Commercial Auto"
+    )
+  +fullWidthSection(
+    "assets/images/bop/img4.jpg",
+    "Who Needs a Business Owners Policy?",
+    "bg-primary",
+    "mb-5",
+    "leftAligned"
+  )
+    p A BOP is ideal for small to mid-sized businesses in Florida, including:
+    +informationBox(
+      "assets/images/bop/icons/icon12.svg",
+      "Retail Stores",
+      "rightAligned",
+      "info"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon13.svg",
+      "Offices",
+      "rightAligned",
+      "info"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon14.svg",
+      "Restaurants & Cafes",
+      "rightAligned",
+      "info"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon15.svg",
+      "Service Providers",
+      "rightAligned",
+      "info"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon16.svg",
+      "Wholesalers",
+      "rightAligned",
+      "info",
+      "(If your business operates in a physical location, serves the public, or owns valuable equipment, a BOP offers essential protection at an affordable price.)"
+    )
+  +fullWidthSection(
+    "assets/images/bop/img5.jpg",
+    "How Much Does a BOP Cost in Florida?",
+    "bg-info",
+    "mb-5",
+    "rightAligned"
+  )
+    p The cost of a Business Owners Policy depends on:
+    +informationBox(
+      "assets/images/bop/icons/icon17.svg",
+      "Business type & industry"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon18.svg",
+      "Size & location of your business"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon19.svg",
+      "Property value and assets"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon20.svg",
+      "Claims history"
+    )
+    +informationBox(
+      "assets/images/bop/icons/icon21.svg",
+      "Chosen coverages and limits"
+    )
+    p On average, small businesses in Florida can expect to pay between $500 and $2,500 annually for a standard BOP.

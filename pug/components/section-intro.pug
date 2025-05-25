@@ -8,7 +8,7 @@ mixin sectionIntro(title, description, textColor='text-info')
         else
           block
 
-mixin descriptionText()
-  .text-center.px-8.py-4_5
+mixin descriptionText(verticalSpace='py-4_5')
+  div(class=`text-center px-sm-4 px-md-8 ${verticalSpace}`)
     p.font-md-large
       block

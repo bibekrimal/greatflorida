@@ -7,8 +7,8 @@ mixin compareBlock(heading, subheading, leftImage, leftTitle, leftDescription, r
         .col-md-6.mb-4.mb-md-0.d-sm-flex
           .compare__block.bg-gray.rounded-sm.flex-sm-grow-1.d-sm-flex
             .compare__holder.border.border-4.border-primary.flex-sm-grow-1
-              .compare__preview
-                img(class="img-fluid", src=leftImage, alt="image description", width="153", height="227")
+              .compare__preview.image-with-overlay
+                img(src=leftImage, alt="image description", width="153", height="227")
               .compare__content
                 .compare__content__title
                   h3.h5.text-uppercase.mb-0= leftTitle
@@ -17,10 +17,11 @@ mixin compareBlock(heading, subheading, leftImage, leftTitle, leftDescription, r
         .col-md-6.d-sm-flex
           .compare__block.compare__block--alt.bg-gray.rounded-sm.flex-sm-grow-1.d-sm-flex
             .compare__holder.border.border-4.border-primary.flex-sm-grow-1
-              .compare__preview.order-md-1
-                img(class="img-fluid", src=rightImage, alt="image description", width="153", height="227")
+              .compare__preview.image-with-overlay.order-md-1
+                img(src=rightImage, alt="image description", width="153", height="227")
               .compare__content.order-md-0
                 .compare__content__title
                   h3.h5.text-uppercase.mb-0= rightTitle
                 .compare__content__description
                   p= rightDescription
+      block

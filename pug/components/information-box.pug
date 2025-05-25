@@ -1,0 +1,13 @@
+mixin informationBox(icon, text, alignment=null, variant=null, smallText=null)
+  -
+    let baseClass = 'information-box'
+
+    if (alignment === 'rightAligned')
+      baseClass += ' flex-md-row-reverse'
+
+  div(class=baseClass)
+    div(class=`icon ${variant ? 'border-' + variant : ''}`)
+      img(class="img-fluid", src=icon, alt="image description", width="87")
+    span.font-weight-bold.line-height-1= text
+      if smallText
+        span.font-small.font-lg-body.font-weight-normal.ps-1= smallText

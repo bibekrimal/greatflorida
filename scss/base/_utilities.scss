@@ -6,10 +6,18 @@
       font-size: $font-size-lg !important;
     }
     .font#{$infix}-small {
-      font-size: 0.9375rem !important;
+      font-size: $font-size-sm !important;
     }
     .font#{$infix}-body {
       font-size: $font-size-base !important;
+    }
+
+    .line-height#{$infix}-small {
+      line-height: $line-height-sm !important;
+    }
+
+    .line-height#{$infix}-1 {
+      line-height: 1 !important;
     }
 
     .rounded#{$infix}-0 {

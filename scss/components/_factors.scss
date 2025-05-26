@@ -163,7 +163,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: rem.convert(5px 20px);
+  padding: rem.convert(5px 16px);
   position: relative;
 
   @include media-breakpoint-down(sm) {

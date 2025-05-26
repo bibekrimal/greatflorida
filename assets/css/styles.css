@@ -1286,7 +1286,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.3125rem 1.25rem;
+  padding: 0.3125rem 1rem;
   position: relative;
 }
 .factors__heading:before {

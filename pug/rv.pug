@@ -1,0 +1,219 @@
+extends includes/layout.pug
+include components/two-cols-text-image.pug
+include components/section-intro.pug
+//- include components/factors-article.pug
+//- include components/information-box.pug
+include components/compare-block.pug
+include components/graphic-list.pug
+include components/card-with-image.pug
+include components/row-with-pill-image-text.pug
+include components/full-width-section.pug
+block vars
+  - var currentPage = "rv"
+  
+block content
+  .intro.py-3.text-center.text-md-start
+    .container
+      +twoColTextImg(
+        "assets/images/rv/img1.jpg",
+        "Why You Need RV Insurance in Florida",
+        "leftAligned",
+        "Living the RV life in Florida is a blast—think endless sunshine, epic campgrounds, and coastal road trips. But with great adventures come a few risks. Florida law says if your RV has a motor (like a Class A, B, or C motorhome), you need at least basic coverage to hit the road legally. Even if you’re towing a travel trailer or fifth wheel, insurance isn’t just smart—it’s peace of mind. With GreatFlorida, you’ll get protection that’s as tailored as your RV’s custom bumper sticker, all at rates that won’t cramp your camping budget."
+      )
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Does GreatFlorida RV Insurance Cover?",
+        "We partner with top-notch insurers to build policies that fit your RV lifestyle—whether you’re a weekend warrior or a full-time roadie. Here’s the rundown on what we can cover:"
+      )
+      .py-3
+        +graphicItem(
+          "assets/images/rv/icons/icon1.svg",
+          "Liability Coverage",
+          "Required for motorized RVs in Florida, this pays for damage or injuries you cause to others—like if you accidentally ding someone’s car at a campsite. Minimums are $10,000 for property damage and $10,000 for Personal Injury Protection (PIP)."
+        )
+        +graphicItem(
+          "assets/images/rv/icons/icon2.svg",
+          "Collision Coverage",
+          "Fixes your RV if you bump into a tree, guardrail, or another vehicle. Perfect for those “oops” moments on tight backroads."
+        )
+        +graphicItem(
+          "assets/images/rv/icons/icon3.svg",
+          "Comprehensive Coverage",
+          "Covers the wild stuff—like theft, vandalism, or a rogue branch crashing through your roof during a storm. Florida’s weather can be a doozy, so this one’s a fan favorite."
+        )
+        +graphicItem(
+          "assets/images/rv/icons/icon4.svg",
+          "Personal Injury Protection (PIP)",
+          "Florida’s no-fault law means you need this—it covers medical bills for you and your passengers, no matter who’s at fault. $10,000 is the minimum, but we can tweak it higher if you want extra cushion."
+        )
+        +graphicItem(
+          "assets/images/rv/icons/icon5.svg",
+          "Uninsured Motorist Coverage",
+          "With so many drivers on Florida roads, this steps in if someone without insurance (or not enough) hits you. Trust us, it’s a lifesaver."
+        )
+        +graphicItem(
+          "assets/images/rv/icons/icon6.svg",
+          "Personal Belongings",
+          "Your gear—think TVs, camping chairs, or that fancy coffee maker—gets protection if it’s damaged or stolen."
+        )
+        +graphicItem(
+          "assets/images/rv/icons/icon7.svg",
+          "Roadside Assistance",
+          "Flat tire in the Everglades? Dead battery near Orlando? We’ll get you towed or fixed, 24/7."
+        )
+        +graphicItem(
+          "assets/images/rv/icons/icon8.svg",
+          "Full-Time RV Living",
+          "If your RV is your permanent pad, we’ll add extras like liability for when you’re parked—similar to homeowners coverage."
+        )
+      +descriptionText("pb-3")
+        | Want more? <br>Ask us about add-ons like emergency expense coverage (for hotels if your RV’s out of commission) or pet injury protection for your furry co-pilot.
+  section.py-3
+    .container
+      +sectionIntro(
+        "Motorhomes, Trailers, and More—We Cover It All",
+        "No matter what kind of RV you roll with, we’ve got you covered:",
+        "text-primary"
+      )
+      .row.gx-lg-2
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/rv/img2.jpg",
+            "assets/images/rv/icons/icon9.svg",
+            "Class A Motorhomes",
+            "blue",
+            "Big, luxurious, and built for the long haul—these beauties need full coverage to match their vibe."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/rv/img3.jpg",
+            "assets/images/rv/icons/icon10.svg",
+            "Class B Camper Vans",
+            "orange",
+            "Compact and nimble, perfect for solo travelers or couples. We’ll keep it simple and affordable."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/rv/img4.jpg",
+            "assets/images/rv/icons/icon11.svg",
+            "Class C Motorhomes",
+            "blue",
+            "The family-friendly middle ground—cozy yet spacious. We’ll protect both the cab and the crib."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/rv/img5.jpg",
+            "assets/images/rv/icons/icon12.svg",
+            "Fifth Wheels & Travel Trailers",
+            "orange",
+            "Towable and awesome, these need coverage for the road and the campsite. (Pro tip: Your tow vehicle needs its own policy, but we can bundle ‘em!)"
+          )
+  +compareBlock(
+    "Florida RV Insurance: What’s Required?",
+    "Florida keeps it straightforward for motorized RVs:",
+    "assets/images/rv/img6.jpg",
+    "$10,000 Property Damage Liability (PDL)",
+    "Covers stuff you might smash into.",
+    "assets/images/rv/img7.jpg",
+    "$10,000 Personal Injury Protection (PIP)",
+    "Takes care of medical costs, no questions asked."
+  )
+    +descriptionText("pt-4_5")
+        | Towing a trailer? You’re not required to insure it separately, but if it’s registered, you’ll need to show proof of coverage (like liability and PIP) to stay legal. Either way, our agents recommend going beyond the minimums—Florida’s roads and weather can throw curveballs, and we’d rather see you fully protected than stuck with a big bill.
+  section.py-3
+    .container
+      +sectionIntro(
+        "How Much Does RV Insurance Cost in Florida?",
+        "Good news—RV insurance doesn’t have to break the bank. Costs depend on a few things:",
+        "text-info"
+      )
+      .py-3
+        +rowWithPillImageText(
+          "assets/images/rv/img8.jpg",
+          "assets/images/rv/icons/icon13.svg",
+          "Your RV Type",
+          "A tricked-out Class A costs more to insure than a pop-up trailer"
+        )
+        +rowWithPillImageText(
+          "assets/images/rv/img9.jpg",
+          "assets/images/rv/icons/icon14.svg",
+          "How You Use It",
+          "Full-time RVers pay a bit more than weekend campers."
+        )
+        +rowWithPillImageText(
+          "assets/images/rv/img10.jpg",
+          "assets/images/rv/icons/icon15.svg",
+          "Driving Record",
+          "Clean history? Lower rates. A few tickets? We’ll still find you a deal."
+        )
+        +rowWithPillImageText(
+          "assets/images/rv/img11.jpg",
+          "assets/images/rv/icons/icon16.svg",
+          "Location",
+          "Parking in hurricane-prone Miami might cost more than chill Tallahassee."
+        )
+        +rowWithPillImageText(
+          "assets/images/rv/img12.jpg",
+          "assets/images/rv/icons/icon17.svg",
+          "Coverage Choices",
+          "More protection = higher premiums, but we’ll balance it with your budget."
+        )
+      +descriptionText("pb-3")
+        | On average, Floridians pay around $1,300-$1,500 a year for motorhome coverage, and less for trailers. With GreatFlorida, our local agents shop top carriers to snag you the best rate—plus, we’ll check for discounts like multi-policy savings if you bundle with your car or home insurance.
+  section.py-3
+    .container
+      +sectionIntro(
+        "Why Choose GreatFlorida for Your RV Insurance?",
+        "We’re not some faceless call center—we’re your neighbors, with 140+ locations across Florida. Here’s why RVers trust us:",
+        "text-primary"
+      )
+      .row.gx-lg-2
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/rv/img13.jpg",
+            "assets/images/rv/icons/icon18.svg",
+            "Local Know-How",
+            "blue",
+            "We live here, so we get Florida’s quirks—like hurricane season and busy I-95 traffic."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/rv/img14.jpg",
+            "assets/images/rv/icons/icon19.svg",
+            "Personal Touch",
+            "orange",
+            "Your agent’s a real person who’ll customize your policy and answer your questions, day or night."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/rv/img15.jpg",
+            "assets/images/rv/icons/icon20.svg",
+            "Top Carriers, Great Rates",
+            "blue",
+            "We team up with A+ insurers to find you coverage that’s strong and affordable."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/rv/img16.jpg",
+            "assets/images/rv/icons/icon21.svg",
+            "24/7 Support",
+            "orange",
+            "Stuck on the road at midnight? We’re just a call away at 888.478.7801."
+          )
+  +fullWidthSection(
+    "assets/images/rv/img17.jpg",
+    "Got a Spotty Driving Record? No Worries!",
+    "bg-primary",
+    "mb-3 mb-md-5",
+    "rightAligned",
+    "Had a fender-bender or a speeding ticket? Maybe a DUI in the past? Don’t sweat it. At GreatFlorida, we’ve got your back. Our agents work with specialized carriers to find coverage that fits, even if your record’s a little bumpy. Everyone deserves to hit the road with confidence."
+  )
+  +fullWidthSection(
+    "assets/images/rv/img18.jpg",
+    "Full-Time RVer? We’ve Got You Covered",
+    "bg-info",
+    "mb-3 mb-md-5",
+    "leftAligned",
+    "Living in your RV full-time is the ultimate freedom, and we’ll make sure your home-on-wheels stays protected. We can add extras like campsite liability, loss assessment (handy for RV parks with HOAs), and coverage for all your stuff inside. It’s like homeowners insurance, but for your rolling lifestyle."
+  )

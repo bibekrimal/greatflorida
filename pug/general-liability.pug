@@ -1,0 +1,211 @@
+extends includes/layout.pug
+include components/two-cols-text-image.pug
+include components/section-intro.pug
+include components/row-with-pill-image-text.pug
+include components/factors-article.pug
+include components/full-width-section.pug
+include components/information-box.pug
+include components/card-with-image.pug
+//- include components/graphic-list.pug
+block vars
+  - var currentPage = "general liability"
+  
+block content
+  .intro.py-3.text-center.text-md-start
+    .container
+      +twoColTextImg(
+        "assets/images/general-liability/img1.jpg",
+        "What is General Liability Insurance?",
+        "leftAligned",
+        "General Liability Insurance (GLI) covers legal and financial responsibilities if your business is found liable for injuries, property damage, or personal/advertising harm. It's one of the most essential types of coverage for any business interacting with clients, customers, or the public."
+      )
+  section.py-3
+    .container
+      +sectionIntro(
+        "What Does General Liability Insurance Cover?"
+      )
+      .py-3
+        +rowWithPillImageText(
+          "assets/images/general-liability/img2.jpg",
+          "assets/images/general-liability/icons/icon1.svg",
+          "Bodily Injury",
+          "Covers medical costs, legal fees, and settlements if someone is injured on your premises or due to your business activities."
+        )
+        +rowWithPillImageText(
+          "assets/images/general-liability/img3.jpg",
+          "assets/images/general-liability/icons/icon2.svg",
+          "Property Damage",
+          "Pays for damage you or your employees cause to another person’s property during the course of business."
+        )
+        +rowWithPillImageText(
+          "assets/images/general-liability/img4.jpg",
+          "assets/images/general-liability/icons/icon3.svg",
+          "Personal & Advertising Injury",
+          "Protection from claims of libel, slander, copyright infringement, or false advertising."
+        )
+        +rowWithPillImageText(
+          "assets/images/general-liability/img5.jpg",
+          "assets/images/general-liability/icons/icon4.svg",
+          "Legal Defense Costs",
+          "Covers attorney fees, court costs, and settlements—even if you are not found liable."
+        )
+        +rowWithPillImageText(
+          "assets/images/general-liability/img6.jpg",
+          "assets/images/general-liability/icons/icon5.svg",
+          "Products & Completed Operations",
+          "Provides coverage for harm caused by products you’ve sold or services you’ve completed."
+        )
+  section.py-3
+    .container
+      +sectionIntro(
+        "Who Needs General Liability Insurance?",
+        "Any Florida business that deals with clients, customers, or the public should carry GLI. This includes:"
+      )
+      .factors__section
+        .grid
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Retail Stores & Restaurants",
+              null,
+              "assets/images/general-liability/icons/icon6.svg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Contractors & Tradespeople",
+              null,
+              "assets/images/general-liability/icons/icon7.svg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Real Estate & Property Managers",
+              null,
+              "assets/images/general-liability/icons/icon8.svg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Consultants & Freelancers",
+              null,
+              "assets/images/general-liability/icons/icon9.svg"
+            )
+          .position-relative
+            .connection__icon
+              img(src="assets/images/icons/icon-dollar.svg", alt="image description", width="13")
+            +factorsArticle(
+              "Medical Offices",
+              null,
+              "assets/images/general-liability/icons/icon10.svg"
+            )
+          .position-relative
+            +factorsArticle(
+              "Event Organizers",
+              null,
+              "assets/images/general-liability/icons/icon11.svg"
+            )
+      +descriptionText("pb-3")
+        | Even home-based businesses can benefit from GLI, as homeowner’s insurance typically excludes business-related claims.
+  +fullWidthSection(
+    "assets/images/general-liability/img7.jpg",
+    "How Much Does General Liability Insurance Cost in Florida?",
+    "bg-primary",
+    "mb-5",
+    "leftAligned"
+  )
+    p Premiums vary depending on:
+    +informationBox(
+      "assets/images/general-liability/icons/icon12.svg",
+      "Business size & Type",
+      "rightAligned",
+      "info"
+    )
+    +informationBox(
+      "assets/images/general-liability/icons/icon23.svg",
+      "Location & Risk Exposure",
+      "rightAligned",
+      "info"
+    )
+    +informationBox(
+      "assets/images/general-liability/icons/icon13.svg",
+      "Claims History",
+      "rightAligned",
+      "info"
+    )
+    +informationBox(
+      "assets/images/general-liability/icons/icon14.svg",
+      "Coverage limits & Deductibles",
+      "rightAligned",
+      "info"
+    )
+    +informationBox(
+      "assets/images/general-liability/icons/icon15.svg",
+      "Number of employees",
+      "rightAligned",
+      "info"
+    )
+    p On average, small businesses in Florida pay between $500 and $1,500 annually for basic GLI coverage.
+  section.py-3
+    .container
+      +sectionIntro(
+        "What is Not Covered by General Liability Insurance?",
+        "While GLI offers broad protection, some risks require additional policies:",
+        "text-primary"
+      )
+      .row.gx-lg-2
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/general-liability/img8.jpg",
+            "assets/images/general-liability/icons/icon16.svg",
+            "Professional Mistakes",
+            "blue",
+            "Covered by Professional Liability (Errors & Omissions) Insurance."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/general-liability/img9.jpg",
+            "assets/images/general-liability/icons/icon17.svg",
+            "Employee Injuries",
+            "orange",
+            "Covered by Workers' Compensation."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/general-liability/img10.jpg",
+            "assets/images/general-liability/icons/icon18.svg",
+            "Vehicle Accidents",
+            "blue",
+            "Covered by Commercial Auto Insurance."
+          )
+        .col-sm-6.col-lg-3.d-flex.mb-4.mb-lg-0
+          +cardWithImage(
+            "assets/images/general-liability/img11.jpg",
+            "assets/images/general-liability/icons/icon19.svg",
+            "Property Damage to Your Business",
+            "orange",
+            "Covered by Commercial Property Insurance."
+          )
+  +fullWidthSection(
+    "assets/images/general-liability/img12.jpg",
+    "Customizing Your Coverage",
+    "bg-info",
+    "mb-5",
+    "rightAligned"
+  )
+    p Every business is different.GreatFlorida agents help tailor your policy with additional options:
+    +informationBox(
+      "assets/images/general-liability/icons/icon20.svg",
+      "Higher coverage limits"
+    )
+    +informationBox(
+      "assets/images/general-liability/icons/icon21.svg",
+      "Umbrella Insurance for added protection"
+    )
+    +informationBox(
+      "assets/images/general-liability/icons/icon22.svg",
+      "Bundled policies like BOP for cost savings"
+    )
+    

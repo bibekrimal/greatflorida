@@ -15,7 +15,7 @@ mixin fullWidthSection(image, title, variant='bg-info', margin=null, imageAlignm
     } else if (imageAlignment === 'rightAligned') {
       contentClass += ' text-md-start'
     }
-    
+    // TODO: make tags configurable
   article(class=`${baseSectionClass} ${variant} ${margin}`)= text
     .container
       div(class=rowClass)

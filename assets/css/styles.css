@@ -172,7 +172,7 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
-ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
+ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1662,6 +1662,40 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
   border-radius: 100%;
 }
 
+.faq__holder {
+  min-height: 60.5rem;
+  position: relative;
+}
+.faq__holder:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url(/assets/images/bg-faq-map.svg) no-repeat center;
+  background-size: 66.5rem 60.5rem;
+  opacity: 0.1;
+}
+.faq__holder .graphic__list__content p:not(:last-child) {
+  margin-bottom: 2.25rem;
+}
+.faq__holder ul li {
+  position: relative;
+  padding-left: 0.9375rem;
+  margin-bottom: 0.625rem;
+}
+.faq__holder ul li:before {
+  content: "";
+  position: absolute;
+  top: 0.6875rem;
+  left: 0;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  background: currentColor;
+  border-radius: 100%;
+}
+
 .graphic__list__item {
   display: flex;
   align-items: center;
@@ -1680,11 +1714,21 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
+  width: 50.6%;
   height: 0.25rem;
   background: #49bcfc;
   margin: auto;
   z-index: -1;
+}
+@media (max-width: 1199.98px) {
+  .graphic__list__item:before {
+    width: 51.8%;
+  }
+}
+@media (max-width: 991.98px) {
+  .graphic__list__item:before {
+    width: 55%;
+  }
 }
 @media (max-width: 767.98px) {
   .graphic__list__item:before {
@@ -1778,8 +1822,8 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
 }
 @media (max-width: 767.98px) {
   .graphic__list__title {
-    text-align: right;
-    align-items: flex-end;
+    text-align: left;
+    align-items: flex-start;
     min-height: 4.25rem;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -1788,7 +1832,6 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
 
 .graphic__list__content {
   line-height: 1.2;
-  background: #fff;
   min-height: 12.5rem;
   padding: 0.75rem 1rem;
   display: flex;
@@ -1801,7 +1844,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
 }
 @media (max-width: 767.98px) {
   .graphic__list__content {
-    text-align: right;
+    text-align: left;
     margin-top: 0.625rem;
     min-height: 6.25rem;
   }

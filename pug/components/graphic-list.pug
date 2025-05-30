@@ -23,4 +23,7 @@ mixin graphicItem(icon, title, description, variant="default")
       div(class=`graphic__list__title text-white rounded-sm ${bgColor}`)
         h3.h5.text-uppercase.mb-0= title
     div(class=`graphic__list__content border border-3 border-md-4 rounded-sm font-md-large ${borderColor}`)
-      p= description
+      if description
+        p= description
+      else
+        block

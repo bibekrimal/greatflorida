@@ -1,4 +1,4 @@
-mixin twoColTextImg(image, title, alignment='default', description)
+mixin twoColTextImg(image, title, alignment='default', description, overlayColor=null)
   -
     // Default Classes
     let imageColClass = 'col-md-6 order-md-1 d-flex justify-content-center justify-content-md-end'
@@ -12,7 +12,7 @@ mixin twoColTextImg(image, title, alignment='default', description)
 
   .row.align-items-start.py-2.py-md-3
     div(class=imageColClass)
-      .image-with-overlay.mb-3.mb-md-0
+      div(class=`image-with-overlay mb-3 mb-md-0 ${overlayColor === 'blue' ? 'overlay--blue' : ''}`)
         img(src=image width="435" height="223" alt="image description")
     div(class=contentColClass)
       h2.text-info= title

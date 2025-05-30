@@ -171,8 +171,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
-  // xxl: 1400px // TODO: add this later
+  xl: 1200px
 );
 // scss-docs-end grid-breakpoints
 
@@ -189,8 +188,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1088px, // modified
-  // xxl: 1320px // TODO: add this later
+  xl: 1088px // modified
 );
 // scss-docs-end container-max-widths
 

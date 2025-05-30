@@ -18,13 +18,13 @@ ol.circle__numberlist {
       left: 0;
       bottom: 0;
       margin: auto;
-      width: 28px;
-      height: 28px;
+      width: rem.convert(28px);
+      height: rem.convert(28px);
       background: $white;
       color: $gray;
       line-height: 1;
       font-weight: bold;
-      border: 3px solid $gray;
+      border: rem.convert(3px solid $gray);
       border-radius: 100%;
       display: flex;
       align-items: center;

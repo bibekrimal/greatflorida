@@ -21,7 +21,6 @@
 .compare__preview {
   flex-shrink: 0;
   height: auto;
-  // width: 31%;
   width: rem.convert(152px);
 
   @include media-breakpoint-only(md) {
@@ -33,14 +32,6 @@
     width: 100%;
     height: rem.convert(200px);
   }
-
-  // img {
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: cover;
-  //   object-position: center;
-  //   vertical-align: top;
-  // }
 }
 
 .compare__content {

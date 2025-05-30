@@ -9,13 +9,10 @@
   width: rem.convert(480px);
   max-width: 100%;
   min-height: rem.convert(78px); // 76px
-  // padding: 0.5rem 1.5rem; // 8px 24px
   padding: rem.convert(3px 20px);
-  // padding: rem.convert(0 20px);
   position: relative;
   display: flex;
   align-items: center;
-  // margin-left: -20px;
 
   @include media-breakpoint-down(sm) {
     width: 100%;
@@ -28,7 +25,6 @@
     .icon__with__circle {
       position: absolute;
       top: 0;
-      // left: rem.convert(-20px);
       left: 0;
       bottom: 0;
       margin: auto;

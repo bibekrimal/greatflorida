@@ -249,3 +249,47 @@
     }
   }
 }
+
+// NEW FAQ design
+
+.faq__holder {
+  min-height: rem.convert(968px);
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(/assets/images/bg-faq-map.svg) no-repeat center;
+    background-size: rem.convert(1064px 968px);
+    opacity: 0.1;
+  }
+
+  .graphic__list__content {
+    p:not(:last-child) {
+      margin-bottom: rem.convert(36px);
+    }
+  }
+
+  ul {
+    @extend %listreset;
+    li {
+      position: relative;
+      padding-left: rem.convert(15px);
+      margin-bottom: rem.convert(10px);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: rem.convert(11px);
+        left: 0;
+        width: rem.convert(5px);
+        height: rem.convert(5px);
+        background: currentColor;
+        border-radius: 100%;
+      }
+    }
+  }
+}

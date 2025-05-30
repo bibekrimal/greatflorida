@@ -7,6 +7,7 @@ include components/card-with-image.pug
 include components/compare-block.pug
 include components/factors-article.pug
 include components/talk-to-us.pug
+include components/graphic-list.pug
 block vars
   - var currentPage = "auto"
   
@@ -240,24 +241,25 @@ block content
               img(class="img-fluid", src="assets/images/auto/icons/icon5.svg", alt="image description", width="87")
             span.font-md-large.font-weight-bold $10,000 in Property Damage Liability (PDL)
           p While these are the legal minimums, we recommend considering higher limits to better safeguard your finances against rising healthcare and repair costs
-  .py-3.py-md-6
+  section.py-3
     .container
-      h2.text-center.text-info Florida Car Insurance Frequently Asked Questions
-      .faq-section
-        .question-figure
-          img(class="img-fluid", src="assets/images/img-question.svg", alt="image description", width="365", height="700")
-        .faq__item.faq__item--1
-          .faq__item__header
-            span.faq__counter 1
-            h3.h5.mb-0 What is a Deductible for Car Insurance?
-          .faq__item__content
-            p The deductible is the out-of-pocket amount you agree to pay when you file a claim before your insurance covers the rest. A higher deductible can lower your monthly premium.
-        .faq__item.faq__item--2
-          .faq__item__header
-            span.faq__counter 2
-            h3.h5.mb-0 What are Florida Teen Driving Laws?
-          .faq__item__content
-            p Florida’s graduated licensing system helps teens gain driving experience safely:
+      +sectionIntro(
+        "Florida Car Insurance Frequently Asked Questions"
+      )
+      .graphic__list.faq__holder
+        +graphicItem(
+          "assets/images/auto/icons/icon24.svg",
+          "What is a Deductible for Car Insurance?",
+          "The deductible is the out-of-pocket amount you agree to pay when you file a claim before your insurance covers the rest. A higher deductible can lower your monthly premium.",
+          "variant-blue"
+        )
+        +graphicItem(
+          "assets/images/auto/icons/icon25.svg",
+          "What are Florida Teen Driving Laws?",
+          null,
+          "variant-blue"
+        )
+          p Florida’s graduated licensing system helps teens gain driving experience safely:
             ul
               li 
                 strong At 15: 
@@ -268,33 +270,24 @@ block content
               li 
                 strong At 17: 
                 | Certain curfew restrictions still apply until full privileges are granted at 18.
-        .faq__item.faq__item--rhs.faq__item--3
-          .faq__item__header
-            span.faq__counter 3
-            h3.h5.mb-0 Why Buy Auto Insurance from a Local Agent?
-          .faq__item__content
-            p Local GreatFlorida agents know the Florida market inside and out. They work directly with top insurers to find competitive rates and personalized policies that fit your unique needs—providing support 24/7 without the frustration of faceless call centers.
-        .faq__item.faq__item--rhs.faq__item--4
-          .faq__item__header
-            span.faq__counter 4
-            h3.h5.mb-0 What Questions Should I Ask My Car Insurance Agent?
-          .faq__item__content
-            p Consider asking:
+        +graphicItem(
+          "assets/images/auto/icons/icon26.svg",
+          "Why Buy Auto Insurance from a Local Agent?",
+          "Local GreatFlorida agents know the Florida market inside and out. They work directly with top insurers to find competitive rates and personalized policies that fit your unique needs—providing support 24/7 without the frustration of faceless call centers.",
+          "variant-blue"
+        )
+        +graphicItem(
+          "assets/images/auto/icons/icon27.svg",
+          "What Questions Should I Ask My Car Insurance Agent?",
+          null,
+          "variant-blue"
+        )
+          p Consider asking:
             ul
-                li What discounts am I eligible for (student, good driver,multi-policy, etc.)?
-                li What is the realistic cost to cover an accident based on my current finances?
-                li Does the insurance company have a strong reputation for service?
-                li Who do I contact to file a claim, and what is the process?
-        .faq__item.faq__item--rhs.faq__item--5
-          .faq__item__header
-            span.faq__counter 5
-            h3.h5.mb-0 How Do I Get in Contact with a GreatFlorida Agent?
-          .faq__item__content
-            p 
-              | Simply call 
-              <a href="tel:8884787801" class="tel-link font-weight-normal">888.478.7801</a> 
-              | or complete our online quote request form. A dedicated GreatFlorida auto insurance agent will reach out to help you secure the best deal possible.
-  
+              li What discounts am I eligible for (student, good driver, multi-policy, etc.)?
+              li What is the realistic cost to cover an accident based on my current finances?
+              li Does the insurance company have a strong reputation for service?
+              li Who do I contact to file a claim, and what is the process?
   +talkToUs(
     "assets/images/auto/img-hero.jpg",
     "Build Your Own Customized Florida Auto Insurance Policy",

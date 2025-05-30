@@ -30,12 +30,20 @@
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    // width: 100%;
+    // right: 0;
+    width: 50.6%;
     height: rem.convert(4px);
     background: $info;
     margin: auto;
     z-index: -1;
+
+    @include media-breakpoint-down(xl) {
+      width: 51.8%;
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 55%;
+    }
 
     @include media-breakpoint-down(md) {
       top: rem.convert(32px);
@@ -150,8 +158,8 @@
   text-align: center;
 
   @include media-breakpoint-down(md) {
-    text-align: right;
-    align-items: flex-end;
+    text-align: left;
+    align-items: flex-start;
     min-height: rem.convert(68px);
     padding-top: rem.convert(12px);
     padding-bottom: rem.convert(12px);
@@ -160,7 +168,7 @@
 
 .graphic__list__content {
   line-height: 1.2;
-  background: $white;
+  // background: $white;
   min-height: rem.convert(200px);
   padding: rem.convert(12px 16px);
   display: flex;
@@ -172,7 +180,7 @@
   position: relative;
 
   @include media-breakpoint-down(md) {
-    text-align: right;
+    text-align: left;
     margin-top: rem.convert(10px);
     min-height: rem.convert(100px);
   }

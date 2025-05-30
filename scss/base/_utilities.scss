@@ -27,7 +27,7 @@
       border-radius: 0.125rem !important;
     }
     .rounded#{$infix}-sm {
-      border-radius: 0.3125rem !important;
+      border-radius: $border-radius-sm !important;
     }
     .rounded#{$infix}-md {
       border-radius: 0.5rem !important;

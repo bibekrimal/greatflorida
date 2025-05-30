@@ -483,6 +483,8 @@ h5,
 
 .talk-to-block {
   min-height: 50vh;
+  display: flex;
+  flex-direction: column;
   // background: url(/assets/images/img-hero.svg) no-repeat;
   // background-size: contain;
   position: relative;
@@ -506,6 +508,13 @@ h5,
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  .btn {
+    min-width: rem.convert(350px);
+    @include media-breakpoint-down(md) {
+      min-width: rem.convert(200px);
     }
   }
 }

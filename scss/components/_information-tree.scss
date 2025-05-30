@@ -1,42 +1,4 @@
 .information-tree {
-  // TODO: Change rem to rem.convert
-  // padding-left: rem(20);
-  dt {
-    // text-transform: uppercase;
-    // font-size: rem.convert(20px);
-    // font-weight: bold;
-    // background: $info;
-    // color: $white;
-    // border-radius: 3.125rem; // 50px
-    // width: 28.475rem; // 455.6px
-    // min-height: 4.7625rem; // 76px
-    // // padding: 0.5rem 1.5rem; // 8px 24px
-    // padding: rem.convert(8px 20px 8px 78px);
-    // position: relative;
-    // display: flex;
-    // align-items: center;
-
-    // @include media-breakpoint-down(sm) {
-    //   width: 100%;
-    //   font-size: rem.convert(16px);
-    // }
-
-    // .icon__with__circle {
-    //   position: absolute;
-    //   top: 0;
-    //   left: rem.convert(-20px);
-    //   bottom: 0;
-    //   margin: auto;
-    //   z-index: 1;
-
-    //   img {
-    //     width: 100%;
-    //     height: auto;
-    //     display: block;
-    //   }
-    // }
-  }
-
   dd {
     padding: rem.convert(18px 0 50px 44px);
     position: relative;
@@ -117,7 +79,6 @@
   .item-title {
     padding: rem.convert(5px 12px);
     margin-bottom: rem.convert(-15px);
-    // margin-bottom: -15px;
     font-size: rem.convert(20px);
     line-height: 1;
     font-weight: bold;

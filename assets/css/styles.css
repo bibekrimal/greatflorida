@@ -654,6 +654,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
   object-position: center;
   vertical-align: top;
 }
+
 .card-type-content {
   width: 100%;
   display: flex;
@@ -966,8 +967,8 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
 }
 @media (max-width: 767.98px) {
   .big-question-mark text {
-    font-size: 350px;
-    transform: translateY(-94px);
+    font-size: 21.875rem;
+    transform: translateY(-5.875rem);
   }
 }
 
@@ -977,7 +978,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
   color: #fff;
   padding: 1.875rem 0;
   min-height: 11.25rem;
-  border-top: 8px solid #f36522;
+  border-top: 0.5rem solid #f36522;
   position: relative;
   z-index: 1;
 }
@@ -987,7 +988,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
   top: 0;
   left: 0;
   right: 0;
-  height: 10px;
+  height: 0.625rem;
   background: #fff;
 }
 .orange-question-section:after {
@@ -1171,7 +1172,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
 }
 
 .factors__section {
-  --factors-article-max-width: 300px;
+  --factors-article-max-width: 18.75rem;
   --factors-heading-height: 4.7625rem;
   --factors-icon-gap: 1.5625rem;
   --factors-icon-size: 5.5625rem;
@@ -1214,7 +1215,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
   --connection-icon-size: 1.875rem;
   width: var(--connection-icon-size);
   height: var(--connection-icon-size);
-  border: 2px solid #f36522;
+  border: 0.125rem solid #f36522;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -1365,7 +1366,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
 }
 @media (max-width: 991.98px) {
   .auto-factors__description {
-    --auto-factors-row-space: 56px;
+    --auto-factors-row-space: 3.5rem;
   }
 }
 @media (max-width: 767.98px) {
@@ -1404,33 +1405,6 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
 }
 .auto-factors__description p {
   margin-bottom: 0;
-}
-
-.custom-grid-container {
-  max-width: 700px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 9.25rem;
-  row-gap: 2.5rem;
-}
-
-/* Below md (i.e., < 768px), adjust lateral gap */
-@media (max-width: 998px) {
-  .custom-grid-container {
-    column-gap: 5.5rem;
-  }
-}
-/* Below sm (i.e., < 576px), switch to 2 columns */
-@media (max-width: 767px) {
-  .custom-grid-container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5.5rem; /* still 5.5rem */
-  }
-}
-.grid-item {
-  background-color: #eee; /* Just for demo */
-  padding: 1rem;
-  text-align: center;
 }
 
 .faq-section {
@@ -1594,7 +1568,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
   min-height: 5rem;
   padding: 0.125rem 3.75rem 0.125rem 0.625rem;
   border: 0.1875rem solid #f36522;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   position: relative;
   margin-bottom: 1.5625rem;
   display: flex;
@@ -1676,6 +1650,10 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
   background: url(/assets/images/bg-faq-map.svg) no-repeat center;
   background-size: 66.5rem 60.5rem;
   opacity: 0.1;
+  z-index: -1;
+}
+.faq__holder .graphic__list__content {
+  background: none;
 }
 .faq__holder .graphic__list__content p:not(:last-child) {
   margin-bottom: 2.25rem;
@@ -1831,6 +1809,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
 }
 
 .graphic__list__content {
+  background: #fff;
   line-height: 1.2;
   min-height: 12.5rem;
   padding: 0.75rem 1rem;
@@ -1968,7 +1947,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__holder ul, .faq__item__content ul {
   align-items: center;
   justify-content: center;
   max-width: 16.875rem;
-  padding: 20px 0;
+  padding: 1.25rem 0;
 }
 
 .circle__container {
@@ -2034,13 +2013,13 @@ ol.circle__numberlist > li:before {
   left: 0;
   bottom: 0;
   margin: auto;
-  width: 28px;
-  height: 28px;
+  width: 1.75rem;
+  height: 1.75rem;
   background: #fff;
   color: #dadbe0;
   line-height: 1;
   font-weight: bold;
-  border: 3px solid #dadbe0;
+  border: 0.1875rem solid #dadbe0;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -2053,7 +2032,7 @@ ol.boxed-list {
   --bs-columns: 3;
   --bs-row-gap: 2.25rem;
   --counter-size: 5.5625rem;
-  --top-space: 80px;
+  --top-space: 5rem;
   counter-reset: boxedList;
   row-gap: var(--bs-row-gap);
 }
@@ -2061,13 +2040,13 @@ ol.boxed-list {
   ol.boxed-list {
     --bs-gap: 1.75rem;
     --counter-size: 4.6875rem;
-    --top-space: 60px;
+    --top-space: 3.75rem;
   }
 }
 @media (max-width: 767.98px) {
   ol.boxed-list {
     --counter-size: 3.75rem;
-    --top-space: 30px;
+    --top-space: 1.875rem;
   }
 }
 @media (max-width: 575.98px) {
@@ -2084,10 +2063,10 @@ ol.boxed-list > li {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 4px solid #49bcfc;
-  min-height: 76px;
+  border: 0.25rem solid #49bcfc;
+  min-height: 4.75rem;
   margin-top: var(--top-space);
-  padding: 10px;
+  padding: 0.625rem;
 }
 ol.boxed-list > li:before {
   content: counter(boxedList, decimal-leading-zero);
@@ -2107,7 +2086,7 @@ ol.boxed-list > li:before {
   bottom: 100%;
   left: 0;
   right: 0;
-  margin: 0 auto -10px;
+  margin: 0 auto -0.625rem;
 }
 @media (max-width: 991.98px) {
   ol.boxed-list > li:before {
@@ -2124,10 +2103,10 @@ ol.boxed-list > li:after {
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto 4px auto 0;
+  margin: auto 0.25rem auto 0;
   right: 100%;
   width: var(--bs-gap);
-  height: 4px;
+  height: 0.25rem;
   background: #dadbe0;
 }
 ol.boxed-list > li:nth-child(3n+1):after {
@@ -2136,7 +2115,7 @@ ol.boxed-list > li:nth-child(3n+1):after {
 
 .title-content-row {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
   z-index: 1;
 }
 .title-content-row:before {
@@ -2150,11 +2129,11 @@ ol.boxed-list > li:nth-child(3n+1):after {
   margin: auto;
   background: #fff;
   z-index: -1;
-  height: 4px;
+  height: 0.25rem;
 }
 @media (max-width: 767.98px) {
   .title-content-row:before {
-    width: 4px;
+    width: 0.25rem;
     height: 50%;
   }
 }
@@ -2168,7 +2147,7 @@ ol.boxed-list > li:nth-child(3n+1):after {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid currentColor;
+  border: 0.1875rem solid currentColor;
   border-radius: 0.25rem;
   font-size: 1.25rem;
   line-height: 1.2;
@@ -2177,7 +2156,7 @@ ol.boxed-list > li:nth-child(3n+1):after {
 .title-box--with-icon {
   background: #fff;
   color: #f36522;
-  margin-left: 43px;
+  margin-left: 2.6875rem;
   padding-left: 58px;
   justify-content: flex-start;
   text-align: left;
@@ -2185,7 +2164,7 @@ ol.boxed-list > li:nth-child(3n+1):after {
 .title-box--with-icon .icon__with__circle {
   position: absolute;
   top: 0;
-  left: -45px;
+  left: -2.8125rem;
   bottom: 0;
   margin: auto;
   z-index: 1;
@@ -2195,35 +2174,35 @@ ol.boxed-list > li:nth-child(3n+1):after {
 }
 
 .compare__table__wrap {
-  --lateral-spacing: 56px;
+  --lateral-spacing: 3.5rem;
   margin: 0 calc(var(--lateral-spacing) / -1);
 }
 @media (max-width: 991.98px) {
   .compare__table__wrap {
-    --lateral-spacing: 20px;
+    --lateral-spacing: 1.25rem;
   }
 }
 @media (max-width: 767.98px) {
   .compare__table__wrap {
-    --lateral-spacing: 5px;
+    --lateral-spacing: 0.3125rem;
   }
 }
 
 .compare__table {
   --bs-table-bg: transparent;
   border-collapse: separate;
-  border-spacing: var(--lateral-spacing) 10px;
+  border-spacing: var(--lateral-spacing) 0.625rem;
 }
 @media (max-width: 767.98px) {
   .compare__table {
-    border-spacing: var(--lateral-spacing) 5px;
+    border-spacing: var(--lateral-spacing) 0.3125rem;
   }
 }
 .compare__table td,
 .compare__table th {
   line-height: 1.2;
-  padding: 3px 10px;
-  height: 55px;
+  padding: 0.1875rem 0.625rem;
+  height: 3.4375rem;
   vertical-align: middle;
 }
 @media (min-width: 768px) {

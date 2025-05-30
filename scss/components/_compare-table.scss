@@ -1,28 +1,28 @@
 .compare__table__wrap {
-  --lateral-spacing: 56px;
+  --lateral-spacing: 3.5rem; // 56px
   margin: 0 calc(var(--lateral-spacing) / -1);
   @include media-breakpoint-down(lg) {
-    --lateral-spacing: 20px;
+    --lateral-spacing: 1.25rem; // 20px
   }
   @include media-breakpoint-down(md) {
-    --lateral-spacing: 5px;
+    --lateral-spacing: 0.3125rem; // 5px
   }
 }
 
 .compare__table {
   --bs-table-bg: transparent;
   border-collapse: separate;
-  border-spacing: var(--lateral-spacing) 10px;
+  border-spacing: var(--lateral-spacing) rem.convert(10px);
 
   @include media-breakpoint-down(md) {
-    border-spacing: var(--lateral-spacing) 5px;
+    border-spacing: var(--lateral-spacing) rem.convert(5px);
   }
 
   td,
   th {
     line-height: 1.2;
-    padding: 3px 10px;
-    height: 55px;
+    padding: rem.convert(3px 10px);
+    height: rem.convert(55px);
     vertical-align: middle;
     @include media-breakpoint-up(md) {
       font-size: $font-size-lg;
@@ -31,11 +31,9 @@
 
   th {
     background: $white;
-    // width: 40%;
   }
 
   td {
-    // width: 20%;
     text-align: center;
   }
 

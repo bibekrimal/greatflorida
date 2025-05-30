@@ -3,7 +3,7 @@ ol.boxed-list {
   --bs-columns: 3;
   --bs-row-gap: 2.25rem; // 36px
   --counter-size: 5.5625rem; // 89px
-  --top-space: 80px;
+  --top-space: 5rem; // 80px
   @extend %listreset;
   counter-reset: boxedList;
   row-gap: var(--bs-row-gap);
@@ -11,12 +11,12 @@ ol.boxed-list {
   @include media-breakpoint-down(lg) {
     --bs-gap: 1.75rem; // 28px
     --counter-size: 4.6875rem; // 75px
-    --top-space: 60px;
+    --top-space: 3.75rem; // 60px
   }
 
   @include media-breakpoint-down(md) {
     --counter-size: 3.75rem; // 60px
-    --top-space: 30px;
+    --top-space: 1.875rem; // 30px
   }
 
   @include media-breakpoint-down(sm) {
@@ -32,10 +32,10 @@ ol.boxed-list {
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 4px solid $info;
-    min-height: 76px;
+    border: rem.convert(4px solid $info);
+    min-height: rem.convert(76px);
     margin-top: var(--top-space);
-    padding: 10px;
+    padding: rem.convert(10px);
     &:before {
       content: counter(boxedList, decimal-leading-zero);
       background: $primary;
@@ -54,7 +54,7 @@ ol.boxed-list {
       bottom: 100%;
       left: 0;
       right: 0;
-      margin: 0 auto -10px;
+      margin: rem.convert(0 auto -10px);
 
       @include media-breakpoint-down(lg) {
         font-size: rem.convert(30px);
@@ -69,10 +69,10 @@ ol.boxed-list {
       position: absolute;
       top: 0;
       bottom: 0;
-      margin: auto 4px auto 0;
+      margin: rem.convert(auto 4px auto 0);
       right: 100%;
       width: var(--bs-gap);
-      height: 4px;
+      height: rem.convert(4px);
       background: $gray;
     }
     &:nth-child(3n + 1) {

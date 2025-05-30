@@ -1,6 +1,6 @@
 .title-content-row {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: rem.convert(28px);
   z-index: 1;
   &:before {
     content: '';
@@ -13,10 +13,10 @@
     margin: auto;
     background: $white;
     z-index: -1;
-    height: 4px;
+    height: rem.convert(4px);
 
     @include media-breakpoint-down(md) {
-      width: 4px;
+      width: rem.convert(4px);
       height: 50%;
     }
   }
@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid currentColor;
+  border: rem.convert(3px solid currentColor);
   border-radius: $border-radius-sm;
   font-size: $font-size-lg;
   line-height: 1.2;
@@ -40,14 +40,14 @@
   &--with-icon {
     background: $white;
     color: $primary;
-    margin-left: 43px;
+    margin-left: rem.convert(43px);
     padding-left: calc(45px + 13px);
     justify-content: flex-start;
     text-align: left;
     .icon__with__circle {
       position: absolute;
       top: 0;
-      left: -45px;
+      left: rem.convert(-45px);
       bottom: 0;
       margin: auto;
       z-index: 1;

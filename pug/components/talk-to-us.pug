@@ -1,9 +1,9 @@
-mixin talkToUs(image, title, description)
+mixin talkToUs(image, title, description, buttonText='Talk to a Greatflorida Agent')
   section.talk-to-block.bg-info.text-white.text-center.font-md-large.py-5.py-md-8
     span.bg-hero
       img(src=image, alt="image description" width="1439" height="695")
-    .container.h-100.d-flex.flex-column
+    .container.flex-grow-1.h-100.d-flex.flex-column
       h2!= title
       p!= description
       .flex-grow-1.d-flex.justify-content-center.align-items-center
-        a.btn.btn-primary.text-uppercase(href="#") Talk to a Greatflorida Agent
+        a.btn.btn-primary.text-uppercase(href="#")= buttonText

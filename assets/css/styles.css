@@ -219,7 +219,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
 }
 
 .rounded-sm {
-  border-radius: 0.3125rem !important;
+  border-radius: 0.25rem !important;
 }
 
 .rounded-md {
@@ -281,7 +281,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
     border-radius: 0.125rem !important;
   }
   .rounded-sm-sm {
-    border-radius: 0.3125rem !important;
+    border-radius: 0.25rem !important;
   }
   .rounded-sm-md {
     border-radius: 0.5rem !important;
@@ -334,7 +334,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
     border-radius: 0.125rem !important;
   }
   .rounded-md-sm {
-    border-radius: 0.3125rem !important;
+    border-radius: 0.25rem !important;
   }
   .rounded-md-md {
     border-radius: 0.5rem !important;
@@ -387,7 +387,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
     border-radius: 0.125rem !important;
   }
   .rounded-lg-sm {
-    border-radius: 0.3125rem !important;
+    border-radius: 0.25rem !important;
   }
   .rounded-lg-md {
     border-radius: 0.5rem !important;
@@ -440,7 +440,7 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
     border-radius: 0.125rem !important;
   }
   .rounded-xl-sm {
-    border-radius: 0.3125rem !important;
+    border-radius: 0.25rem !important;
   }
   .rounded-xl-md {
     border-radius: 0.5rem !important;
@@ -897,6 +897,8 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
 
 .talk-to-block {
   min-height: 50vh;
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 1;
 }
@@ -918,6 +920,14 @@ ol.boxed-list, ol.circle__numberlist, .faq__item__content ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.talk-to-block .btn {
+  min-width: 21.875rem;
+}
+@media (max-width: 767.98px) {
+  .talk-to-block .btn {
+    min-width: 12.5rem;
+  }
 }
 
 .contact__section {
@@ -2079,6 +2089,124 @@ ol.boxed-list > li:after {
 }
 ol.boxed-list > li:nth-child(3n+1):after {
   display: none;
+}
+
+.title-content-row {
+  position: relative;
+  margin-bottom: 28px;
+  z-index: 1;
+}
+.title-content-row:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 40%;
+  margin: auto;
+  background: #fff;
+  z-index: -1;
+  height: 4px;
+}
+@media (max-width: 767.98px) {
+  .title-content-row:before {
+    width: 4px;
+    height: 50%;
+  }
+}
+
+.title-box {
+  background: #49bcfc;
+  color: #fff;
+  min-height: 4.75rem;
+  padding: 0.1875rem 0.8125rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid currentColor;
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-align: center;
+}
+.title-box--with-icon {
+  background: #fff;
+  color: #f36522;
+  margin-left: 43px;
+  padding-left: 58px;
+  justify-content: flex-start;
+  text-align: left;
+}
+.title-box--with-icon .icon__with__circle {
+  position: absolute;
+  top: 0;
+  left: -45px;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+.title-box p {
+  margin-bottom: 0;
+}
+
+.compare__table__wrap {
+  --lateral-spacing: 56px;
+  margin: 0 calc(var(--lateral-spacing) / -1);
+}
+@media (max-width: 991.98px) {
+  .compare__table__wrap {
+    --lateral-spacing: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .compare__table__wrap {
+    --lateral-spacing: 5px;
+  }
+}
+
+.compare__table {
+  --bs-table-bg: transparent;
+  border-collapse: separate;
+  border-spacing: var(--lateral-spacing) 10px;
+}
+@media (max-width: 767.98px) {
+  .compare__table {
+    border-spacing: var(--lateral-spacing) 5px;
+  }
+}
+.compare__table td,
+.compare__table th {
+  line-height: 1.2;
+  padding: 3px 10px;
+  height: 55px;
+  vertical-align: middle;
+}
+@media (min-width: 768px) {
+  .compare__table td,
+  .compare__table th {
+    font-size: 1.25rem;
+  }
+}
+.compare__table th {
+  background: #fff;
+}
+.compare__table td {
+  text-align: center;
+}
+.compare__table thead th {
+  text-align: center;
+}
+.compare__table thead th:first-child {
+  background: none;
+}
+.compare__table tbody th {
+  width: 40%;
+}
+.compare__table tbody td {
+  width: 20%;
+  background: #d9d9d9;
 }
 
 /*# sourceMappingURL=styles.css.map */

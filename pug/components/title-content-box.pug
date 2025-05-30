@@ -1,0 +1,10 @@
+mixin titleContentBox(icon, title, description)
+    .row.align-items-center.title-content-row
+      .col-md-5.pe-md-0
+        .title-box.title-box--with-icon.font-weight-bold.mb-4.mb-md-0
+          span.icon__with__circle
+            img(src=icon, width="87", alt="image description")
+          span.d-block= title
+      .col-md-7.ps-md-7.mb-3
+        .title-box
+          p= description

@@ -1,0 +1,178 @@
+extends includes/layout.pug
+include components/two-cols-text-image.pug
+include components/section-intro.pug
+include components/title-content-box.pug
+include components/full-width-section.pug
+include components/graphic-list.pug
+include components/talk-to-us.pug
+//- include components/factors-article.pug
+//- include components/information-box.pug
+//- include components/compare-block.pug
+//- include components/card-with-image.pug
+//- include components/row-with-pill-image-text.pug
+block vars
+  - var currentPage = "rv"
+  
+block content
+  .intro.py-3.text-center.text-md-start
+    .container
+      +twoColTextImg(
+        "assets/images/insurance-franchise/img1.jpg",
+        "A Proven Model for Success",
+        "leftAligned",
+        "As the largest privately held insurance franchise organization in the State of Florida, we pride ourselves on our independence. With no private equity, venture capital, bank ownership, or debt, we maintain a business model that puts you in control. Our agents own 100% of their book of business—giving you the flexibility to buy, sell, or even gift your book-of-business as you see fit."
+      )
+  section.bg-info.py-5.mb-3.mb-md-5
+    .container
+      h2.text-white.text-center.mb-5 Industry-Leading Benefits
+      +titleContentBox(
+        "assets/images/insurance-franchise/icons/icon1.svg",
+        "Lowest Royalty Fee in the Industry:",
+        "Keep more of your hard-earned commissions."
+      )
+      +titleContentBox(
+        "assets/images/insurance-franchise/icons/icon2.svg",
+        "Direct Carrier Relationships:",
+        "Your name, address, and phone number appear on the declaration page of policies issued from your agency."
+      )
+      +titleContentBox(
+        "assets/images/insurance-franchise/icons/icon3.svg",
+        "Direct Commission Payouts:",
+        "Receive commission payments directly from carriers to your agency bank account."
+      )
+      +titleContentBox(
+        "assets/images/insurance-franchise/icons/icon4.svg",
+        "Exclusive Carrier Appointments:",
+        "Enjoy direct appointments with top carriers like Progressive, Travelers, GEICO, Slide, Windward Risk, Monarch, and more."
+      )
+      .compare__table__wrap.table-responsive-md
+        table.table.table-borderless.compare__table
+          thead
+            tr
+              th(scope="col") &nbsp;
+              th(scope="col")
+                img.img-fluid.d-none.d-md-block(src="assets/images/insurance-franchise/gf-logo.avif", alt="image description", width="169")
+                img.img-fluid.d-md-none(src="assets/images/logo-small.png", alt="image description", width="60")
+              th(scope="col") Other Franchise Models in Florida
+              th(scope="col")
+                img.img-fluid.d-none.d-md-block(src="assets/images/insurance-franchise/logo-captive-agents.png", alt="image description", width="184")
+                img.img-fluid.d-md-none(src="assets/images/insurance-franchise/logo-captive-agents-small.png", alt="image description", width="95")
+          tbody
+            tr
+              th(scope="row") Agent Commissions?
+              td 8% to 21%
+              td 8% to 18%
+              td 6% to 9%
+            tr
+              th(scope="row") Health &amp; Life Sales Quotas?
+              td NO
+              td NO
+              td YES
+            tr
+              th(scope="row") Sales Restrictions?
+              td NO
+              td YES
+              td YES
+            tr
+              th(scope="row") Bonuses from Carriers?
+              td YES
+              td NO
+              td NO
+            tr
+              th(scope="row") Own Your Book of Business?
+              td YES
+              td MAYBE
+              td MAYBE
+            tr
+              th(scope="row") Ability to Sell to Anyone?
+              td YES
+              td NO
+              td NO
+            tr
+              th(scope="row") Difference in New Business vs. Renewal Royalty?
+              td NO
+              td YES
+              td YES
+  +fullWidthSection(
+    "assets/images/insurance-franchise/img2.jpg",
+    "Comprehensive Support for Franchisees",
+    "bg-primary",
+    null,
+    "rightAligned",
+    "We know that success starts with the right foundation. That’s why every new franchisee receives dedicated one-on-one training to ensure you’re equipped with the skills and knowledge to excel. We also keep our network engaged and informed with three in-person meetings each year, so you’re always on top of the latest industry trends and developments."
+  )
+  section.py-3
+    .container
+      +sectionIntro(
+        "Turn‑Key Digital Marketing Powered by Webnition",
+        "GreatFlorida Insurance takes your business growth to the next level with a cutting-edge, turn‑key digital marketing solution powered by Webnition. This comprehensive SAAS platform is designed exclusively for franchises and multi-location businesses, simplifying and automating your online presence management. Here’s what you can expect:",
+        "text-primary"
+      )
+      .py-3
+        +graphicItem(
+          "assets/images/insurance-franchise/icons/icon5.svg",
+          "Dominate Local Search",
+          "Each franchise location is individually optimized for local SEO, ensuring your agency stands out in local search results. With tailored content and proven search marketing strategies, you’ll attract more customers directly in your market."
+        )
+        +graphicItem(
+          "assets/images/insurance-franchise/icons/icon6.svg",
+          "AI-Powered Reputation Management",
+          "Harness the power of AI to automate and personalize review responses across platforms. This feature not only enhances your online reputation but also builds trust with potential clients by delivering timely, professional responses."
+        )
+        +graphicItem(
+          "assets/images/insurance-franchise/icons/icon7.svg",
+          "Accurate Business Listings & Continuous Synchronization",
+          "Your business information is automatically updated across 100+ directories, ensuring consistency and boosting your search visibility. This eliminates manual updates, so your details remain accurate and current at all times."
+        )
+        +graphicItem(
+          "assets/images/insurance-franchise/icons/icon8.svg",
+          "Integrated Digital Advertising",
+          "Leverage locally targeted ad campaigns that drive high-quality leads. From Google Maps Ads to strategic PPC campaigns, the platform helps you connect with the right audience and convert searches into customers."
+        )
+        +graphicItem(
+          "assets/images/insurance-franchise/icons/icon9.svg",
+          "All-in-One Management Dashboard",
+          "Simplify your online presence with a single, intuitive dashboard that integrates website management, SEO, social media, digital advertising, and real-time reporting. Monitor Google Business activity, track customer reviews, and analyze performance data effortlessly."
+        )
+        +graphicItem(
+          "assets/images/insurance-franchise/icons/icon10.svg",
+          "Custom Lead Generation & Smart Call Routing",
+          "The system is engineered to capture leads and direct them to the nearest location based on geolocation data, ensuring faster response times and higher conversion rates."
+        )
+      +descriptionText("pb-4_5")
+        | By combining these powerful tools, Webnition helps you simplify, optimize, and automate your digital marketing efforts—so you can focus on what you do best: providing exceptional insurance service and building lasting client relationships.
+  section.py-3.bg-info.mb-3.mb-md-5
+    .container
+      +sectionIntro(
+        "RECOGNIZED EXCELLENCE",
+        "Our commitment to excellence is validated by industry rankings:",
+        "text-white"
+      )
+      .row.justify-content-between.mb-3.mb-md-4_5
+        .col-7.col-xl-8
+          .border.border-3.border-primary.rounded-sm.bg-white.text-center.px-4.px-lg-7.px-xl-17.py-1.font-md-large.font-weight-bold.text-primary.h-100.d-flex.flex-column.align-items-center.justify-content-center
+            p.mb-0 2024 Top 20 Agency Partnership Nationwide as ranked by the Insurance Journal.
+        .col-5.col-xl-3
+          .border.border-3.border-black.rounded-sm.bg-white.text-center.px-3.py-1.font-md-large.line-height-small.font-weight-bold.h-100.d-flex.flex-column.align-items-center.justify-content-center
+            p.mb-0 #324 in Entrepreneur’s Franchise 500 Ranking 2025.
+      .row.align-items-center.justify-content-between.mb-3.mb-md-4_5
+        .col-sm-8.col-xl-8.text-center
+          img.img-fluid(src="assets/images/insurance-franchise/logo-top-agency-partnerships.png", alt="Top 20 Agency Partnerships #14", width="712")
+        .col-sm-4.col-xl-3.text-center.pt-3.pt-sm-0
+          img.img-fluid(src="assets/images/insurance-franchise/logo-ef500.webp", alt="We ranked in the Entrepreneur Franchise 500", width="255")
+      .text-center.font-md-large.py-3
+        p In today’s market, GreatFlorida Insurance Agencies are valued between 2.5x and 3.5x gross commissions—a testament to the strength and sustainability of our business model.
+  +fullWidthSection(
+    "assets/images/insurance-franchise/img3.jpg",
+    "A Diverse and Experienced Agency Force",
+    "bg-primary",
+    "mb-3 mb-md-5",
+    "rightAligned",
+    "Our agency force is composed of former Allstate, State Farm, and Farmers Insurance agents who sought reassurance in owning their own book of business while enjoying the flexibility to write a variety of policies. Whether your focus is personal or commercial lines, GreatFlorida Insurance has the strategic partnerships and expertise in place to help you provide the perfect solutions for your clients—every time."
+  )
+  +talkToUs(
+    "assets/images/img-hero.jpg",
+    "Ready to take the next step?",
+    "Join GreatFlorida Insurance and become part of a network where independent agents thrive. Contact us today to learn more about how our franchise model—and our integrated digital marketing platform powered by Webnition—can empower you to build a successful, agent-owned business in Florida’s competitive insurance market.",
+    "Contact Us Today!"
+  )

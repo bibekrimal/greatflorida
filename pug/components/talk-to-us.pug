@@ -3,7 +3,7 @@ mixin talkToUs(image, title, description, buttonText='Talk to a Greatflorida Age
     span.bg-hero
       img(src=image, alt="image description" width="1439" height="695")
     .container.flex-grow-1.h-100.d-flex.flex-column
-      h2!= title
-      p!= description
+      h2.h1.text-uppercase.text-black.mb-4.mb-md-5!= title
+      p.font-weight-bold.mb-4.mb-md-5!= description
       .flex-grow-1.d-flex.justify-content-center.align-items-center
         a.btn.btn-primary.text-uppercase(href="#")= buttonText

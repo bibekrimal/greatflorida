@@ -24,24 +24,24 @@
     padding: rem.convert(3px 10px);
     height: rem.convert(55px);
     vertical-align: middle;
+  }
+
+  th {
+    background: $white;
     @include media-breakpoint-up(md) {
       font-size: $font-size-lg;
     }
   }
 
-  th {
-    background: $white;
-  }
-
   td {
-    text-align: center;
+    // text-align: center;
   }
 
   thead {
     th {
       text-align: center;
       &:first-child {
-        background: none;
+        // background: none;
       }
     }
   }
@@ -54,6 +54,7 @@
     td {
       width: 20%;
       background: $gray-300;
+      font-size: $font-size-base;
     }
   }
 }

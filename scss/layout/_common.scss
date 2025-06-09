@@ -13,8 +13,10 @@
 
 h2,
 .h2 {
+  margin-bottom: 1.5rem;
   @include media-breakpoint-down(md) {
     font-size: rem.convert(24px);
+    margin-bottom: 1.25rem;
   }
 }
 

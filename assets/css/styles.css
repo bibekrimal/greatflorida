@@ -2205,23 +2205,16 @@ ol.boxed-list > li:nth-child(3n+1):after {
   height: 3.4375rem;
   vertical-align: middle;
 }
+.compare__table th {
+  background: #fff;
+}
 @media (min-width: 768px) {
-  .compare__table td,
   .compare__table th {
     font-size: 1.25rem;
   }
 }
-.compare__table th {
-  background: #fff;
-}
-.compare__table td {
-  text-align: center;
-}
 .compare__table thead th {
   text-align: center;
-}
-.compare__table thead th:first-child {
-  background: none;
 }
 .compare__table tbody th {
   width: 40%;
@@ -2229,6 +2222,7 @@ ol.boxed-list > li:nth-child(3n+1):after {
 .compare__table tbody td {
   width: 20%;
   background: #d9d9d9;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

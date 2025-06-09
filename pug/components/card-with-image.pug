@@ -27,5 +27,5 @@ mixin cardWithImage(image, icon, title, variant='blue', description=null)
       div(class=contentClass)
         div(class=iconClass)
           img(src=icon, alt="image description", width="70", height="70")
-        h3.h5= title
+        h3.h5.text-uppercase= title
         p= description

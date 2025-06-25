@@ -14,7 +14,7 @@ mixin informationTreeItem(title, titleIcon, leftBoxTitle, leftBoxContent, rightB
         img(src=titleIcon, width="87", alt="image description")
       = title
     dd
-      .d-md-flex
+      .row.g-0
         div(class=`col-md-6 information-tree__info d-flex flex-column justify-content-center align-items-center ${lastItem ? 'information-tree__info--first' : ''}`)
           span.item-title.bg-primary.text-white.rounded-pill.font-lg= leftBoxTitle
           div(class=leftBoxHolderBaseClass)

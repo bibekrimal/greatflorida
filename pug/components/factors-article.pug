@@ -1,7 +1,7 @@
 mixin factorsArticle(title, description, icon, image=null)
-  article.factors__article.text-center.mb-3
+  article.factors__article.mb-3
     if image
-      .factors__image.image-with-overlay.border.border-4.border-primary.rounded-sm
+      .factors__image.image-with-overlay.border.border-4.border-primary.rounded-lg
         img.img-fluid(src=image, alt="image description", width="206", height="141")
     .factors__content
       .factors__icon

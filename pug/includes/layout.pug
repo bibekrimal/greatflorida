@@ -3,9 +3,10 @@ html(lang="en")
   include head.pug
   body
     block vars
-    #wrapper
+    #wrapper.pt-10
+      include nav.pug
 
       block content
       
-      include about.pug
+      //- include about.pug
     include foot.pug

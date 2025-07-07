@@ -1,7 +1,7 @@
 :root {
-  --bs-body-font-size: 1.125rem; // 18px
+  // --bs-body-font-size: 1.125rem; // 18px
   @include media-breakpoint-down(md) {
-    --bs-body-font-size: 1rem; // 16px
+    // --bs-body-font-size: 1rem; // 16px
   }
 }
 
@@ -70,17 +70,17 @@ h5,
     object-position: center;
     vertical-align: top;
   }
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba($primary, 0.3);
-    z-index: 1;
-    pointer-events: none;
-  }
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   background-color: rgba($primary, 0.3);
+  //   z-index: 1;
+  //   pointer-events: none;
+  // }
 
   &.bg-info {
     &:after {
@@ -159,7 +159,13 @@ h5,
     right: 0;
     z-index: -1;
     &:after {
-      background-color: rgba($primary, 0.4);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba($info, 0.45);
     }
   }
 

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npm run compile:sass & npm run compile:pug & npm run browser-sync",
+    "start": "run-p compile:* browser-sync",
     "compile:sass": "sass --watch scss:assets/css",
-    "compile:pug": "pug ./pug/*.pug --watch --pretty --out ./",
+    "compile:pug": "pug ./pug/base --watch --pretty --out ./",
     "browser-sync": "browser-sync start --server --files 'scss/*.scss, *.html, assets/css/*.css'"
   },
   "author": "",
@@ -13,6 +13,7 @@
   "description": "",
   "devDependencies": {
     "browser-sync": "^3.0.3",
+    "npm-run-all": "^4.1.5",
     "pug-cli": "^1.0.0-alpha6",
     "sass": "^1.85.1"
   },

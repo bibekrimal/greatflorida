@@ -1,9 +1,9 @@
-extends includes/layout.pug
-include components/compare-block.pug
-include components/section-intro.pug
-include components/graphic-list.pug
-include components/full-width-section.pug
-include components/information-box.pug
+extends ../includes/layout.pug
+include ../components/compare-block.pug
+include ../components/section-intro.pug
+include ../components/graphic-list.pug
+include ../components/full-width-section.pug
+include ../components/information-box.pug
 block vars
   - var currentPage = "bop"
   
@@ -22,14 +22,10 @@ block content
         | With one policy, you safeguard your business against common risks—allowing you to focus on growth, not uncertainty.
   section.py-3
     .container
-      +sectionIntro(
-        "What Does a BOP Cover?",
-        null,
-        "text-primary"
-      )
+      <h2 class="text-primary text-center">What Does a Business Owner's Policy Cover?</h2>
       section.py-4
-        .row
-          .col-md-6.pe-md-5.pe-lg-8
+        .row.justify-content-center
+          .col-md-6
             h3.pill__heading.rounded-sm.w-100.justify-content-center.text-center.mb-4.mb-md-5 Property Coverage
         +graphicItem(
           "assets/images/bop/icons/icon1.svg",
@@ -50,8 +46,8 @@ block content
           "variant-primary"
         )
       section.py-4
-        .row
-          .col-md-6.pe-md-5.pe-lg-8
+        .row.justify-content-center
+          .col-md-6
             h3.pill__heading.rounded-sm.w-100.justify-content-center.text-center.mb-4.mb-md-5 Liability Coverage
         +graphicItem(
           "assets/images/bop/icons/icon4.svg",
@@ -78,7 +74,7 @@ block content
     "mb-5",
     "rightAligned"
   )
-    p GreatFlorida agents can help you tailor your BOP with extra protection, including:
+    p GreatFlorida agents can help you tailor your Business Owner's Policy with extra protection, including:
     +informationBox(
       "assets/images/bop/icons/icon7.svg",
       "Professional Liability (Errors & Omissions)"
@@ -106,7 +102,7 @@ block content
     "mb-5",
     "leftAligned"
   )
-    p A BOP is ideal for small to mid-sized businesses in Florida, including:
+    p A Business Owner's Policy is ideal for small to mid-sized businesses in Florida, including:
     +informationBox(
       "assets/images/bop/icons/icon12.svg",
       "Retail Stores",
@@ -136,11 +132,11 @@ block content
       "Wholesalers",
       "rightAligned",
       "info",
-      "(If your business operates in a physical location, serves the public, or owns valuable equipment, a BOP offers essential protection at an affordable price.)"
+      "(If your business operates in a physical location, serves the public, or owns valuable equipment, a Business Owner's Policy offers essential protection at an affordable price.)"
     )
   +fullWidthSection(
     "assets/images/bop/img5.jpg",
-    "How Much Does a BOP Cost in Florida?",
+    "How Much Does a Business Owner's Policy Cost in Florida?",
     "bg-info",
     "mb-5",
     "rightAligned"

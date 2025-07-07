@@ -1,13 +1,13 @@
-extends includes/layout.pug
-include components/two-cols-text-image.pug
-include components/section-intro.pug
-include components/information-tree-item.pug
-include components/full-width-section.pug
-include components/card-with-image.pug
-include components/compare-block.pug
-include components/factors-article.pug
-include components/talk-to-us.pug
-include components/graphic-list.pug
+extends ../includes/layout.pug
+include ../components/two-cols-text-image.pug
+include ../components/section-intro.pug
+include ../components/information-tree-item.pug
+include ../components/full-width-section.pug
+include ../components/card-with-image.pug
+include ../components/compare-block.pug
+include ../components/factors-article.pug
+include ../components/talk-to-us.pug
+include ../components/graphic-list.pug
 block vars
   - var currentPage = "auto"
   
@@ -164,7 +164,7 @@ block content
                 p Safeguards your vehicle against non-collision events such as theft, vandalism, fire, or weather-related incidents (including hurricane damage).
       .text-center.pt-3
         p.mb-0 Understanding the difference helps you choose the right protection for your vehicle.
-  section.py-3.py-md-5.text-center
+  section.py-3.py-md-5
     .container
       +sectionIntro(
         "How Much is Car Insurance in Florida?",
@@ -229,7 +229,7 @@ block content
         .col-md-5.order-md-1.d-flex.justify-content-center.justify-content-md-end.position-relative
           .image-with-overlay.image-bleed.mb-3.mb-md-0
             img(class="img-fluid", src="assets/images/auto/img8.jpg", alt="image description", width="435", height="223")
-        .col-md-6.font-md-large.text-center.text-md-start.py-3.py-md-5
+        .col-md-6.text-center.text-md-start.py-3.py-md-5
           h2 What is the Minimum Required Auto Insurance Coverage in Florida?
           p To register a vehicle in Florida, drivers must carry at least:
           .information-box

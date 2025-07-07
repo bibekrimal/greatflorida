@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :root,
 [data-bs-theme=light] {
-  --bs-blue: #49bcfc;
+  --bs-blue: #46b4fe;
   --bs-indigo: #8c6fe6;
   --bs-purple: #7e6cab;
   --bs-pink: #e66fd2;
@@ -22,7 +22,7 @@
   --bs-primary: #f36522;
   --bs-secondary: #dadbe0;
   --bs-success: #0bd984;
-  --bs-info: #49bcfc;
+  --bs-info: #46b4fe;
   --bs-danger: #dc3545;
   --bs-light: #FCFCFC;
   --bs-dark: #072635;
@@ -31,7 +31,7 @@
   --bs-primary-rgb: 243, 101, 34;
   --bs-secondary-rgb: 218, 219, 224;
   --bs-success-rgb: 11, 217, 132;
-  --bs-info-rgb: 73, 188, 252;
+  --bs-info-rgb: 70, 180, 254;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 252, 252, 252;
   --bs-dark-rgb: 7, 38, 53;
@@ -40,7 +40,7 @@
   --bs-primary-text-emphasis: rgb(97.2, 40.4, 13.6);
   --bs-secondary-text-emphasis: rgb(87.2, 87.6, 89.6);
   --bs-success-text-emphasis: rgb(4.4, 86.8, 52.8);
-  --bs-info-text-emphasis: rgb(29.2, 75.2, 100.8);
+  --bs-info-text-emphasis: rgb(28, 72, 101.6);
   --bs-warning-text-emphasis: rgb(102, 77.2, 2.8);
   --bs-danger-text-emphasis: rgb(88, 21.2, 27.6);
   --bs-light-text-emphasis: #495057;
@@ -48,7 +48,7 @@
   --bs-primary-bg-subtle: rgb(252.6, 224.2, 210.8);
   --bs-secondary-bg-subtle: rgb(247.6, 247.8, 248.8);
   --bs-success-bg-subtle: rgb(206.2, 247.4, 230.4);
-  --bs-info-bg-subtle: rgb(218.6, 241.6, 254.4);
+  --bs-info-bg-subtle: rgb(218, 240, 254.8);
   --bs-warning-bg-subtle: rgb(255, 242.6, 205.4);
   --bs-danger-bg-subtle: rgb(248, 214.6, 217.8);
   --bs-light-bg-subtle: rgb(253.5, 253.5, 253.5);
@@ -56,7 +56,7 @@
   --bs-primary-border-subtle: rgb(250.2, 193.4, 166.6);
   --bs-secondary-border-subtle: rgb(240.2, 240.6, 242.6);
   --bs-success-border-subtle: rgb(157.4, 239.8, 205.8);
-  --bs-info-border-subtle: rgb(182.2, 228.2, 253.8);
+  --bs-info-border-subtle: rgb(181, 225, 254.6);
   --bs-warning-border-subtle: rgb(255, 230.2, 155.8);
   --bs-danger-border-subtle: rgb(241, 174.2, 180.6);
   --bs-light-border-subtle: #f4f0fe;
@@ -136,7 +136,7 @@
   --bs-primary-text-emphasis: rgb(247.8, 162.6, 122.4);
   --bs-secondary-text-emphasis: rgb(232.8, 233.4, 236.4);
   --bs-success-text-emphasis: rgb(108.6, 232.2, 181.2);
-  --bs-info-text-emphasis: rgb(145.8, 214.8, 253.2);
+  --bs-info-text-emphasis: rgb(144, 210, 254.4);
   --bs-warning-text-emphasis: rgb(255, 217.8, 106.2);
   --bs-danger-text-emphasis: rgb(234, 133.8, 143.4);
   --bs-light-text-emphasis: #FCFCFC;
@@ -144,7 +144,7 @@
   --bs-primary-bg-subtle: rgb(48.6, 20.2, 6.8);
   --bs-secondary-bg-subtle: rgb(43.6, 43.8, 44.8);
   --bs-success-bg-subtle: rgb(2.2, 43.4, 26.4);
-  --bs-info-bg-subtle: rgb(14.6, 37.6, 50.4);
+  --bs-info-bg-subtle: rgb(14, 36, 50.8);
   --bs-warning-bg-subtle: rgb(51, 38.6, 1.4);
   --bs-danger-bg-subtle: rgb(44, 10.6, 13.8);
   --bs-light-bg-subtle: #343a40;
@@ -152,7 +152,7 @@
   --bs-primary-border-subtle: rgb(145.8, 60.6, 20.4);
   --bs-secondary-border-subtle: rgb(130.8, 131.4, 134.4);
   --bs-success-border-subtle: rgb(6.6, 130.2, 79.2);
-  --bs-info-border-subtle: rgb(43.8, 112.8, 151.2);
+  --bs-info-border-subtle: rgb(42, 108, 152.4);
   --bs-warning-border-subtle: rgb(153, 115.8, 4.2);
   --bs-danger-border-subtle: rgb(132, 31.8, 41.4);
   --bs-light-border-subtle: #495057;
@@ -2863,8 +2863,8 @@ progress {
   text-decoration-color: RGBA(var(--bs-info-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-info:hover, .link-info:focus {
-  color: RGBA(109, 201, 253, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(109, 201, 253, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(107, 195, 254, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(107, 195, 254, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-danger {
@@ -3239,13 +3239,13 @@ progress {
 
 .table-info {
   --bs-table-color: #000;
-  --bs-table-bg: rgb(218.6, 241.6, 254.4);
-  --bs-table-border-color: rgb(174.88, 193.28, 203.52);
-  --bs-table-striped-bg: rgb(207.67, 229.52, 241.68);
+  --bs-table-bg: rgb(218, 240, 254.8);
+  --bs-table-border-color: rgb(174.4, 192, 203.84);
+  --bs-table-striped-bg: rgb(207.1, 228, 242.06);
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: rgb(196.74, 217.44, 228.96);
+  --bs-table-active-bg: rgb(196.2, 216, 229.32);
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: rgb(202.205, 223.48, 235.32);
+  --bs-table-hover-bg: rgb(201.65, 222, 235.69);
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -3468,19 +3468,19 @@ progress {
 
 .btn-info {
   --bs-btn-color: #000;
-  --bs-btn-bg: #49bcfc;
-  --bs-btn-border-color: #49bcfc;
+  --bs-btn-bg: #46b4fe;
+  --bs-btn-border-color: #46b4fe;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(118.5, 204.75, 252.75);
-  --bs-btn-hover-border-color: rgb(109.4, 201.4, 252.6);
-  --bs-btn-focus-shadow-rgb: 62, 160, 214;
+  --bs-btn-hover-bg: rgb(116.25, 198.75, 254.25);
+  --bs-btn-hover-border-color: rgb(107, 195, 254.2);
+  --bs-btn-focus-shadow-rgb: 60, 153, 216;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(109.4, 201.4, 252.6);
-  --bs-btn-active-border-color: rgb(91.2, 194.7, 252.3);
+  --bs-btn-active-bg: rgb(107, 195, 254.2);
+  --bs-btn-active-border-color: rgb(88.5, 187.5, 254.1);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #49bcfc;
-  --bs-btn-disabled-border-color: #49bcfc;
+  --bs-btn-disabled-bg: #46b4fe;
+  --bs-btn-disabled-border-color: #46b4fe;
 }
 
 .btn-danger {
@@ -3620,19 +3620,19 @@ progress {
 }
 
 .btn-outline-info {
-  --bs-btn-color: #49bcfc;
-  --bs-btn-border-color: #49bcfc;
+  --bs-btn-color: #46b4fe;
+  --bs-btn-border-color: #46b4fe;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #49bcfc;
-  --bs-btn-hover-border-color: #49bcfc;
-  --bs-btn-focus-shadow-rgb: 73, 188, 252;
+  --bs-btn-hover-bg: #46b4fe;
+  --bs-btn-hover-border-color: #46b4fe;
+  --bs-btn-focus-shadow-rgb: 70, 180, 254;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #49bcfc;
-  --bs-btn-active-border-color: #49bcfc;
+  --bs-btn-active-bg: #46b4fe;
+  --bs-btn-active-border-color: #46b4fe;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #49bcfc;
+  --bs-btn-disabled-color: #46b4fe;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #49bcfc;
+  --bs-btn-disabled-border-color: #46b4fe;
   --bs-gradient: none;
 }
 

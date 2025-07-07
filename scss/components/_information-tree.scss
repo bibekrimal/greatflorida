@@ -60,8 +60,10 @@
   position: relative;
   padding-left: rem.convert(40px);
 
-  @include media-breakpoint-down(md) {
-    margin-bottom: rem.convert(20px);
+  & + .information-tree__info {
+    @include media-breakpoint-down(md) {
+      margin-top: rem.convert(20px);
+    }
   }
 
   &:before {

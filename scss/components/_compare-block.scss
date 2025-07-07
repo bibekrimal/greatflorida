@@ -84,10 +84,10 @@
 
 .compare__content__description {
   padding-left: rem.convert(30px);
-  font-size: $font-size-lg;
+  // font-size: $font-size-lg;
 
   @include media-breakpoint-down(sm) {
-    font-size: $font-size-base;
+    // font-size: $font-size-base;
     padding-left: 0;
   }
 

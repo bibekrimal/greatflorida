@@ -1,6 +1,6 @@
 mixin informationTreeItem(title, titleIcon, leftBoxTitle, leftBoxContent, rightBoxTitle, rightBoxContent, rightBoxIcon=null, lastItem=null)
   -
-    let leftBoxHolderBaseClass = "item-desc-holder border border-3 border-info rounded text-center"
+    let leftBoxHolderBaseClass = "item-desc-holder border border-3 border-info rounded"
     let rightBoxHolderBaseClass = "item-desc-holder border border-3 border-primary rounded"
 
     if (lastItem) {
@@ -14,7 +14,7 @@ mixin informationTreeItem(title, titleIcon, leftBoxTitle, leftBoxContent, rightB
         img(src=titleIcon, width="87", alt="image description")
       = title
     dd
-      .d-md-flex
+      .row.g-0
         div(class=`col-md-6 information-tree__info d-flex flex-column justify-content-center align-items-center ${lastItem ? 'information-tree__info--first' : ''}`)
           span.item-title.bg-primary.text-white.rounded-pill.font-lg= leftBoxTitle
           div(class=leftBoxHolderBaseClass)

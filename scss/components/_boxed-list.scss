@@ -2,7 +2,8 @@ ol.boxed-list {
   --bs-gap: 3.625rem; // 58px
   --bs-columns: 3;
   --bs-row-gap: 2.25rem; // 36px
-  --counter-size: 5.5625rem; // 89px
+  // --counter-size: 5.5625rem; // 89px
+  --counter-size: 2.8125rem; // 45px
   --top-space: 5rem; // 80px
   @extend %listreset;
   counter-reset: boxedList;
@@ -47,7 +48,7 @@ ol.boxed-list {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: rem.convert(36px);
+      font-size: rem.convert(18px);
       line-height: 1;
       font-weight: bold;
       position: absolute;
@@ -57,11 +58,11 @@ ol.boxed-list {
       margin: rem.convert(0 auto -10px);
 
       @include media-breakpoint-down(lg) {
-        font-size: rem.convert(30px);
+        // font-size: rem.convert(30px);
       }
 
       @include media-breakpoint-down(md) {
-        font-size: rem.convert(25px);
+        // font-size: rem.convert(25px);
       }
     }
     &:after {

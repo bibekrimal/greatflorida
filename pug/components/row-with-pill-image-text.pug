@@ -1,7 +1,7 @@
 mixin rowWithPillImageText(image, icon, title, description)
   .auto-factors__item.row.g-0
     .auto-factors__col.col-lg-3.mb-2.mb-lg-0.d-none.d-lg-block
-      .image-with-overlay.image-with-overlay--small.border.border-4.border-primary.rounded-sm.mb-3.mb-md-0
+      .image-with-overlay.image-with-overlay--small.border.border-4.border-primary.rounded-lg.mb-3.mb-md-0
         img(src=image, alt="image description", width="251", height="141")
     .auto-factors__col.auto-factors__col--middle.col-md-6.col-lg-4
       .pill__heading.pill__heading--with-icon
@@ -10,5 +10,5 @@ mixin rowWithPillImageText(image, icon, title, description)
         = title
 
     .auto-factors__col.col-md-5.col-lg-4
-      .auto-factors__description.border.border-4.border-info.rounded-sm.text-md-center
+      .auto-factors__description.border.border-4.border-info.rounded-sm
         p= description

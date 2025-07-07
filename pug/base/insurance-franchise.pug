@@ -1,10 +1,10 @@
-extends includes/layout.pug
-include components/two-cols-text-image.pug
-include components/section-intro.pug
-include components/title-content-box.pug
-include components/full-width-section.pug
-include components/graphic-list.pug
-include components/talk-to-us.pug
+extends ../includes/layout.pug
+include ../components/two-cols-text-image.pug
+include ../components/section-intro.pug
+include ../components/title-content-box.pug
+include ../components/full-width-section.pug
+include ../components/graphic-list.pug
+include ../components/talk-to-us.pug
 block vars
   - var currentPage = "insurance franchise"
   
@@ -40,13 +40,15 @@ block content
         "Exclusive Carrier Appointments:",
         "Enjoy direct appointments with top carriers like Progressive, Travelers, GEICO, Slide, Windward Risk, Monarch, and more."
       )
+  .mb-3.mb-md-5
+    .container
       .compare__table__wrap.table-responsive-md
         table.table.table-borderless.compare__table
           thead
             tr
               th(scope="col") Feature
               th(scope="col")
-                img.img-fluid.d-none.d-md-block(src="assets/images/insurance-franchise/gf-logo.avif", alt="image description", width="169")
+                img.img-fluid.d-none.d-md-block(src="assets/images/insurance-franchise/gf-logo.png", alt="image description", width="169")
                 img.img-fluid.d-md-none(src="assets/images/logo-small.png", alt="image description", width="60")
               th(scope="col") Other Franchise Models in Florida
           tbody
@@ -164,8 +166,8 @@ block content
         .col-sm-8.col-xl-8.text-center
           img.img-fluid(src="assets/images/insurance-franchise/logo-top-agency-partnerships.png", alt="Top 20 Agency Partnerships #14", width="712")
         .col-sm-4.col-xl-3.text-center.pt-3.pt-sm-0
-          img.img-fluid(src="assets/images/insurance-franchise/logo-ef500.webp", alt="We ranked in the Entrepreneur Franchise 500", width="255")
-      .text-center.font-md-large.py-3
+          img.img-fluid(src="assets/images/insurance-franchise/logo-ef500.png", alt="We ranked in the Entrepreneur Franchise 500", width="255")
+      .text-center.py-3
         p In today’s market, GreatFlorida Insurance Agencies are valued between 2.5x and 3.5x gross commissions—a testament to the strength and sustainability of our business model.
   +fullWidthSection(
     "assets/images/insurance-franchise/img3.jpg",
